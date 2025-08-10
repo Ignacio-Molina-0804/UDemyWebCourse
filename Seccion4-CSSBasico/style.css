@@ -1,0 +1,32 @@
+
+/* Selector de etiqueta */
+
+body{
+
+    background-color: lightgray;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+/* Selector de ID */
+
+#container {
+
+    width: 70%;
+    margin: 0px auto;
+    border: 1px solid black;
+
+}
+
+/* Selector de Clase */
+
+.article{
+
+
+}
+
+header{
+
+    background-color: aqua;
+
+}
