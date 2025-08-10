@@ -61,7 +61,7 @@ body {
     /* justify-content: space-evenly; */
 
     /* Centra todos los elementos a lo largo del eje principal */
-    /* justify-content: center; */
+    justify-content: center;
 
     /* ALING ITEMS */
 
@@ -83,13 +83,13 @@ body {
     /* ALING CONTENT */
 
     /* Alinea las líneas al inicio del eje transversal */
-    align-content: flex-start;
+    /* align-content: flex-start; */
 
     /* Alinea las líneas al final del eje transversal */
     /* align-content: flex-end; */
 
     /* Centra todas las líneas en el eje transversal */
-    /* align-content: center; */
+    align-content: center;
 
     /* Distribuye las líneas con espacio igual entre ellas, pero no en los bordes */
     /* align-content: space-between; */
@@ -102,5 +102,40 @@ body {
 
     /* Estira las líneas para que ocupen todo el espacio disponible en el eje transversal */
     /* align-content: stretch; */
+  }
+
+  /* ORDER - FLEX GROW - FLEX BASIS*/
+  
+  /* Order: Etiqueta la cual comparten todos los hijos de un container flex donde podes colocar el orden en el que queres que se muestre el objeto. */
+  /* Flex Grow: Etiqueta la cual comparten todos los hijos de un container flex donde podes asignar el tamaño que va a tener cada objeto del container, donde estos van a tener mayor o menor tamaño según vos lo coloques. */
+  /* Flex-Basis: Define el tamaño inicial que tendrá un elemento dentro de un contenedor flex antes de que 
+   se aplique la distribución de espacio con flex-grow o flex-shrink. 
+   Puede ser en px, %, em, etc., y se toma en cuenta según el eje principal (width si flex-direction: row, height si flex-direction: column). */
+
+  .c1 {
+    background-color: aquamarine;
+    order: 1;
+    flex-grow: 2;
+    flex-basis: 50%;
+  }
+
+  .c2 {
+    background-color: rgb(255, 127, 127);
+    order: 2;
+    flex-grow: 5;
+    flex-basis: 10%;
+  }
+
+  .c3 {
+    background-color: rgb(127, 140, 255);
+    order: 3;
+    flex-basis: 25%;
+  }
+
+  .c4 {
+    background-color: rgb(255, 127, 206);
+    order: 4;
+    flex-grow: 1;
+    flex-basis: 15%;
   }
 }
