@@ -1,0 +1,44 @@
+body {
+  background-color: beige;
+
+  .caja {
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+    font-family: "Courier New", Courier, monospace;
+    font-weight: bold;
+    width: 120px;
+    height: 120px;
+    text-align: center;
+    line-height: 120px;
+    margin: 5px;
+  }
+
+  .flex-container {
+    border: 1px solid black;
+    background-color: rgb(141, 141, 138);
+    padding: 20px;
+    display: flex;
+    /* Organizacion de los objetos en columna */
+    /* flex-direction: column; */
+
+    /* Organizacion de los objetos en columna pero en orden inverso*/
+    /* flex-direction: column-reverse; */
+
+    /* Organizacion de los objetos en fila pero en orden inverso*/
+    /* flex-direction: row-reverse; */
+
+    /* Organizacion de los objetos en fila */
+    /* flex-direction: row; */
+
+    /* Lo que hace el wrap es hacer que los objetos no se amontonen en una misma linea y vayan bajando en caso de llegar a un punto donde cambie su tamaño */
+    /* flex: wrap; */
+
+    /* Opcion que se encuentra por default y hace lo contrario al flex wrap */
+    /* flex: nowrap; */
+
+    /* Lo que hace el flex flow es lo mismo que hacemos con el flex explicado anteriormente pero lo hacemos en una sola linea donde podemos especificar todo */
+    flex-flow: row wrap;
+    
+  }
+}
