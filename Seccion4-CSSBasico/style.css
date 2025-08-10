@@ -1,3 +1,11 @@
+/* Selector General para resetear los estilos por defecto de CSS*/
+
+*{
+
+    margin: 0px;
+    padding: 0px;
+
+}
 
 /* Selector de etiqueta */
 
@@ -28,5 +36,8 @@ body{
 header{
 
     background-color: aqua;
+    height: 100px;
+    width: 100%;
+    margin: 0px;
 
 }
