@@ -1,7 +1,13 @@
-//Archivo donde debemos compilar los estilos para poder exportar el archivo, esto se hace mediante el comando sass --watch (Archivo de entrada/style.scss) (Nombre del archivo que quieras crear/style.css)
+// Archivo donde debemos compilar los estilos para poder exportar el archivo, esto se hace mediante el comando sass --watch (Archivo de entrada/style.scss) (Nombre del archivo que quieras crear/style.css)
 
-///Variables
-//Se pueden crear variables en scss para poder tener una mayor organizacion en caso de por ejemplo colores especificos de una marca, colores de letra, tipografias, entre otros.
+
+/// @use
+// Se utiliza para poder importar los estilos de otros archivos como en este caos el de anidacion.
+@use "anidacion";
+
+
+/// Variables
+// Se pueden crear variables en scss para poder tener una mayor organizacion en caso de por ejemplo colores especificos de una marca, colores de letra, tipografias, entre otros.
 
 $color-fondo: #eee1c6ff;
 $color-letra: rgb(28, 66, 13);
@@ -24,22 +30,3 @@ p{
 
 }
 
-///Anidacion
-//Podes colocar diferentes etiquetas dentro que haran que se hagan automaticamente los codigos como en este caso el ".caja h2{}" y ".caja p{}"
-
-.caja{
-
-    h2{
-
-        color: black;
-        font-family: Arial, Helvetica, sans-serif;
-
-    }
-
-    p{
-
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        text-decoration: underline;
-
-    }
-}
