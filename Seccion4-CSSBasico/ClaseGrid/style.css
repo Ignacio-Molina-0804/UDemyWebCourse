@@ -4,6 +4,24 @@ body {
   text-align: center;
 }
 
+/* Grid Template Columns: Sirve para definir cuántas columnas tendrá el grid y su tamaño.
+   Ejemplo: grid-template-columns: 100px 1fr 2fr;
+   → 1ª columna: 100px, 2ª columna: ocupa 1 parte del espacio disponible, 3ª columna: 2 partes. */
+
+/* Grid Template Rows: Sirve para definir cuántas filas tendrá el grid y su tamaño.
+   Ejemplo: grid-template-rows: 50px auto 200px;
+   → 1ª fila: 50px, 2ª fila: ajusta su tamaño automáticamente, 3ª fila: 200px. */
+
+/* Grid Template Areas: Sirve para definir un layout visual nombrando áreas del grid,
+   permitiendo luego ubicar elementos por nombre.
+   Ejemplo:
+   grid-template-areas:
+      "header header"
+      "sidebar main"
+      "footer footer";
+   → Crea un grid donde 'header', 'sidebar', 'main' y 'footer' son áreas con nombre
+     que luego se asignan usando grid-area en los elementos. */
+
 .grid-layout {
   background-color: lightgreen;
   display: grid;
