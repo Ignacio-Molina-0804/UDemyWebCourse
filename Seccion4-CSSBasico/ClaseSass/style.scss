@@ -1,8 +1,25 @@
 //Archivo donde debemos compilar los estilos para poder exportar el archivo, esto se hace mediante el comando sass --watch (Archivo de entrada/style.scss) (Nombre del archivo que quieras crear/style.css)
 
+///Variables
+//Se pueden crear variables en scss para poder tener una mayor organizacion en caso de por ejemplo colores especificos de una marca, colores de letra, tipografias, entre otros.
+
+$color-fondo: #eee1c6ff;
+$color-letra: rgb(28, 66, 13);
 
 body{
     
-    background-color: #eee1c6ff
+    background: $color-fondo;
     
-    }
+}
+
+h1{
+
+    color: $color-letra;
+
+}
+
+p{
+
+    color: $color-letra;
+
+}
