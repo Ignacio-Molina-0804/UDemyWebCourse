@@ -30,3 +30,28 @@ p{
 
 }
 
+/// Mixins
+// Sirve para hacer una funcion donde uno guarda los valores que tiene por defecto, por ende si nosotros despues se lo pasamos a uno de los estilos podemos usar una configuracion general y asi poder tener un codigo limpio
+
+@mixin caja_personalizada($fondo: white){
+
+    background-color: $fondo;
+    border: 4px solid black;
+    box-shadow: 0px 0px 2px black;
+    color: $color-letra;
+    margin: 20px;
+}
+
+.caja{
+
+    @include caja_personalizada($fondo: yellow);
+
+}
+
+.cajaSecundaria{
+
+    @include caja_personalizada($fondo: blue);
+
+}
+
+
