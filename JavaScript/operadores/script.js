@@ -27,12 +27,23 @@ console.log("Potencia = " + potencia);
 // Asignacion
 
 let numerito = 17   // Asignacion Basica
+console.log(numerito)
+
 numerito += 3       // Asignacion aplicando suma
+console.log(numerito)
+
 numerito -= 3       // Asignacion aplicando resta
+console.log(numerito)
+
 numerito *= 3       // Asignacion aplicando multiplicacion
+console.log(numerito)
+
 numerito /= 3       // Asignacion aplicando division
+console.log(numerito)
 
 // Comparacion
+
+
 
 // Logicos
 
