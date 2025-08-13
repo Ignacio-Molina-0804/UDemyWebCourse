@@ -43,6 +43,31 @@ console.log(numerito)
 
 // Comparacion
 
+let numerazo = 31
+
+// Comparacion de valores
+console.log(numerazo == 31) // True
+console.log(numerazo == 33) // False
+
+// Comparacion de valor y tipo de dato
+console.log(numerazo === 31) // True
+console.log(numerazo === "31") // False
+
+// Comparacion de valor donde revisa si no es igual
+console.log(numerazo != 31) // False
+console.log(numerazo != 33) // True
+
+// Comparacion de valor y tipo de dato donde revisa si no es igual
+console.log(numerazo !== 31) // False
+console.log(numerazo !== "31") // True
+
+// Comparacion si es mayor o menor
+console.log(numerazo > 30) // True
+console.log(numerazo < 30) // False
+
+// Comparacion si es mayor/igual o menor/igual
+console.log(numerazo >= 31) // True
+console.log(numerazo <= 30) // False
 
 
 // Logicos
