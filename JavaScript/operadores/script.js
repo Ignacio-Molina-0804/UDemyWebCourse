@@ -69,8 +69,22 @@ console.log(numerazo < 30) // False
 console.log(numerazo >= 31) // True
 console.log(numerazo <= 30) // False
 
-
 // Logicos
+
+let esMayorDeEdad = true 
+let tieneEntrada = true
+
+// AND (Si se cumplen todas las condiciones es true, sino false)
+console.log(esMayorDeEdad && tieneEntrada);
+
+// OR (Si se cumple una de las condiciones es true, sino false)
+console.log(esMayorDeEdad || tieneEntrada);
+
+// Negacion (En este caso vendria a estar siendo como un menos en matematica, si es false lo cambia a true y si es true lo cambia a false)
+console.log(!esMayorDeEdad);
+
+
+
 
 // Cadena
 
