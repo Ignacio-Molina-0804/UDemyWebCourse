@@ -83,9 +83,17 @@ console.log(esMayorDeEdad || tieneEntrada);
 // Negacion (En este caso vendria a estar siendo como un menos en matematica, si es false lo cambia a true y si es true lo cambia a false)
 console.log(!esMayorDeEdad);
 
-
-
-
 // Cadena
+
+let texto1 = "Hola"
+let texto2 = "Que tal"
+
+let textoTotal = texto1 + " " + texto2
+
+console.log(textoTotal);
+
+textoTotal += " Soy Nacho"
+
+console.log(textoTotal);
 
 // Incremento y decremento
