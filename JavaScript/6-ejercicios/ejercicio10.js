@@ -20,5 +20,6 @@ let totalBurgers = victor + pepe + manolo;
 
 let esCierto = victor < pepe;
 
+console.log("Ejercicio 10");
 console.log("El total de hamburguesas smash fue de: " + totalBurgers);
 console.log("¿Es cierto que victor comió menos que pepe?: " + esCierto);
