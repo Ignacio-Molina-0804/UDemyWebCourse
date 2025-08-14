@@ -97,3 +97,16 @@ textoTotal += " Soy Nacho"
 console.log(textoTotal);
 
 // Incremento y decremento
+
+let cifra = 100
+
+// Incremento (Colocando ++ hace que al valor se le sume 1)
+
+cifra++
+console.log(cifra);
+
+
+// Decremento (Colocando -- hace que al valor se le reste 1)
+
+cifra--
+console.log(cifra);
