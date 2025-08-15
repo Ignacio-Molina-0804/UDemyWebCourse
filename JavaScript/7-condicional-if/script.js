@@ -65,3 +65,22 @@ if (edad >= 18) {
   );
 
 }
+
+// Ejemplo 4
+// Tenemos que hacer un condicional viendo en que era estamos en base a los operadores logicos
+
+yearActual = 2025
+
+if (yearActual >= 2000 && yearActual <= 2030){
+
+    console.log("Estamos en la era moderna");
+    
+} else if (yearActual > 2030){
+
+    console.log("Estamos en la era Post Moderna");
+    
+} else {
+
+    console.log("Estas en la era antigua");
+    
+}
