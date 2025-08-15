@@ -31,3 +31,37 @@ if (edadPepe >= 18) {
     `${nombre} no es mayor de edad debido a que tiene ${edadPepe} años.`
   );
 }
+
+// Ejemplo 3
+
+// Hacer el caso de ver si alguien en mayor o menor de edad, en el caso de que sea mayor de diferenciar entre un adolescente, adulto o anciano
+
+let nombre2 = "Juan";
+let edad = 18;
+
+if (edad >= 18) {
+  console.log(
+    `${nombre2} es mayor de edad debido a que tiene ${edad} años.`
+  );
+
+  if(edad <= 20){
+
+    console.log("Y ademas en adolescente.")
+
+  } else if (edad >= 70) {
+
+    console.log("Y ademas es anciano")
+
+  } else {
+
+    console.log("Y ademas es adulto");
+    
+  }
+
+} else {
+
+  console.log(
+    `${nombre2} no es mayor de edad debido a que tiene ${edad} años.`
+  );
+
+}
