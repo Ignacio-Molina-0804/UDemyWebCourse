@@ -1,5 +1,8 @@
 // Alertas
 
+let mensaje = "Hola soy Pepito";
+
+alert(mensaje);
 
 // Confirmacion
 
