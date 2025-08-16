@@ -25,6 +25,13 @@ switch (miDesayuno) {
 
 // Condicional Ternario
 
+// El condicional ternario en JavaScript es una forma compacta de tomar decisiones, funcionando como un if...else pero en una sola línea.
 
+let nombre = "Juan Alberto";
+let edad = 18;
+
+let resultado = (edad >= 18) ? "Es mayor de edad" : "Es menor de edad";
+
+console.log(resultado);
 
 // Diferencia entre Var y Let (ambito/bloques)
