@@ -34,4 +34,15 @@ let resultado = (edad >= 18) ? "Es mayor de edad" : "Es menor de edad";
 
 console.log(resultado);
 
-// Diferencia entre Var y Let (ambito/bloques)
+// Diferencia entre Var y Let (alcance/bloques)
+
+// var -> alcance de función, se puede usar fuera de bloques { }
+// let -> alcance de bloque, solo existe dentro del bloque { }
+
+if (true) {
+  var x = 1;   // x existe fuera del if
+  let y = 2;   // y solo existe dentro del if
+}
+
+console.log(x); // 1
+console.log(y); // Error: y no está definida
