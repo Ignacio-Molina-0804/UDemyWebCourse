@@ -41,3 +41,23 @@ while (contador < 5) {
     console.log("El contador es: " + contador);
     contador++;
 }
+
+/// Bucle Do While
+
+// El bucle do...while ejecuta el código al menos una vez
+// y luego repite mientras la condición sea verdadera.
+
+/*
+do {
+   // ejecutas código
+} while (condicion);
+*/
+
+// Ejemplo:
+let numero = 0;
+
+do {
+    console.log("El número es: " + numero);
+    numero++;
+} while (numero < 3);
+
