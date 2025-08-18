@@ -325,6 +325,7 @@ console.log(resultado);
 /*
 
 Ejercicio 22:
+
 Tenemos una bolsa con 37 caramelos.
 
 Cada vez que te comes uno, quedan menos.
@@ -344,4 +345,26 @@ while (bolsa > 0) {
   bolsa--;
   // equivalente: bolsa = bolsa - 1;
 }
+
+/*
+
+Ejercicio 23:
+
+Tenemos que despegar con un cohete al espacio
+y necesitamos una cuenta regresiva de 10.
+
+Hazlo con el bucle for.
+
+*/
+
+alert("Ejercicio 23");
+
+console.log("¡COMIENZA LA CUENTA REGRESIVA!");
+
+for (let cuenta = 10; cuenta > 0; cuenta--) {
+  console.log(cuenta);
+}
+
+console.log("¡DESPEGAMOS! 🚀");
+
 
