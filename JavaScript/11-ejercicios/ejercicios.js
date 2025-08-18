@@ -133,7 +133,7 @@ alert("Ejercicio 15");
 
 do {
 
-    let numIntroducido = parseInt(prompt("Ingrese un numero para sumar y sacar la media de todo (Cuando quiera que termine el proceso mande un numero negativo)"))
+    numIntroducido = parseInt(prompt("Ingrese un numero para sumar y sacar la media de todo (Cuando quiera que termine el proceso mande un numero negativo)"))
 
     if(isNaN(numIntroducido)){
 
@@ -170,4 +170,47 @@ for (let i = 1; i <= 10; i++) {
     console.log(`${numTablaMultiplicar} x ${i} = ${numTablaMultiplicar * i}`)
 }
 
+/*
 
+Ejercicio 17
+
+Mostrar todos los numeros impares que hay entre dos numeros que nos da el usuario
+
+*/
+
+alert("Ejercicio 17");
+
+let numeroIngresado1 = parseInt(
+    prompt("Ingresa el primer numero", 1)
+)
+
+let numeroIngresado2 = parseInt(
+    prompt("Ingresa el segundo numero", 1)
+)
+
+while (
+  numeroIngresado1 <= 0 ||
+  numeroIngresado2 <= 0 ||
+  isNaN(numeroIngresado1) ||
+  isNaN(numeroIngresado2) ||
+  numeroIngresado2 < numeroIngresado1
+)
+ {
+    alert("Debe ingresar números válidos y mayores a 0.");
+    numeroIngresado1 = parseInt(
+        prompt("Ingresa el primer numero", 1)
+    )
+    numeroIngresado2 = parseInt(
+        prompt("Ingresa el segundo numero", 1)
+    )
+}
+
+for (let i = numeroIngresado1; i <= numeroIngresado2; i++){
+
+    if (i % 2 != 0){
+
+        console.log(`El numero ${i} es impar`);
+
+    }
+
+}
