@@ -151,5 +151,23 @@ do {
 alert (`La suma de los numeros es: ${suma}`)
 alert (`La media de los numeros es: ${suma/contador}`)
 
-/* */
+/* 
+
+Ejercicio 16
+
+Escribe un programa que muestre la tabla de multiplicacion del numero
+que haya introducido el usuario.
+
+*/
+
+alert("Ejercicio 16");
+
+let numTablaMultiplicar = parseInt(prompt("¿Qué número quieres para que te dé su tabla de multiplicación?", "1"))
+
+console.log("Tabla del " + numTablaMultiplicar)
+
+for (let i = 1; i <= 10; i++) {
+    console.log(`${numTablaMultiplicar} x ${i} = ${numTablaMultiplicar * i}`)
+}
+
 
