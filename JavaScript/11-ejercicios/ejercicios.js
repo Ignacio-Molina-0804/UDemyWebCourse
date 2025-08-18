@@ -227,6 +227,8 @@ Haz un programa para que pueda adivinar el numero
 
 */
 
+alert("Ejercicio 18");
+
 const numeroRespuesta = Math.floor(Math.random() * 17) + 1;
 let numeroParaAdivinar = 0;
 
@@ -253,6 +255,8 @@ Ejercicio 19:
 Muestra todos los numeros divisores de un numero que se mete en un prompt
 
 */
+
+alert("Ejercicio 19");
 
 let numero = parseInt(prompt("Mete tu número y te digo los divisores", 1));
 
