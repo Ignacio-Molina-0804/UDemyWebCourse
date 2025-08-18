@@ -111,3 +111,37 @@ switch (genero){
         break
 
 }
+
+/* 
+
+Ejercicio 15
+
+Muestra la suma y la media de los numeros introducidos
+hasta introducir un numero negativo y ahi mostrar el resultado
+
+*/
+
+let numIntroducido = 0
+let suma = 0
+let contador = 0
+
+do {
+
+    let numIntroducido = parseInt(prompt("Ingrese un numero para sumar y sacar la media de todo (Cuando quiera que termine el proceso mande un numero negativo)"))
+
+    if(isNaN(numIntroducido)){
+
+        suma = 0
+
+    } else if (numIntroducido >= 0){
+
+        suma += numIntroducido
+        contador++ 
+
+    }
+
+} while (numIntroducido >= 0)
+
+alert (`La suma de los numeros es: ${suma}`)
+alert (`La media de los numeros es: ${suma/contador}`)
+
