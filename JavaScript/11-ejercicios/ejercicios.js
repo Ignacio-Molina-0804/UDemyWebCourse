@@ -265,3 +265,24 @@ for (let contador = 1; contador <= numero; contador++) {
         console.log(`El ${contador} es divisor de ${numero}`);
     }
 }
+
+/*
+
+Ejercicio 20:
+
+En base al número que nos dé el usuario,
+decirle si es par o impar.
+
+*/
+
+let numeroParOImpar;
+
+while (isNaN(numeroParOImpar)) {
+  numeroParOImpar = parseInt(prompt("Mete el número para ver si es par o impar:", 0));
+}
+
+if (numeroParOImpar % 2 === 0) {
+  alert("El número " + numeroParOImpar + " es PAR");
+} else {
+  alert("El número " + numeroParOImpar + " es IMPAR");
+}
