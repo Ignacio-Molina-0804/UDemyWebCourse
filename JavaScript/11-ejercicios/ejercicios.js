@@ -72,3 +72,42 @@ for(let contador = 1; contador <= saltos; contador++){
                 y ha recorrido un total de ${distanciaRecorrida} metros.`);
 
 }
+
+/* 
+
+Ejercicio 14:
+
+Un DJ no sabe que genero musical poner en la fiesta...
+
+Preguntale al usuario que genero de musica quiere (pop, rock o rap)
+
+Segun lo que prefiera que devuelva un mensaje diferente
+
+*/
+
+let genero = prompt("¿Que genero de musica prefieres? (Rock, Pop, Rap)").toLowerCase()
+
+while(genero != "pop" && genero != "rock" && genero != "rap"){
+
+    alert("Genero incorrecto, ingresa uno de las posibles opciones")
+
+    genero = prompt("¿Que genero de musica prefieres? (Rock, Pop, Rap)").toLowerCase()
+
+}
+
+
+switch (genero){
+
+    case "rock":
+        alert("Esta sonando ROCK")
+        break;
+
+    case "pop":
+        alert("Esta sonando POP")
+        break
+
+    case "rap":
+        alert("Esta sonando RAP")
+        break
+
+}
