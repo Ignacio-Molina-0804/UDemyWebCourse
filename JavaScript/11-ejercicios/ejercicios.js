@@ -277,6 +277,8 @@ decirle si es par o impar.
 
 let numeroParOImpar;
 
+alert("Ejercicio 20");
+
 while (isNaN(numeroParOImpar)) {
   numeroParOImpar = parseInt(prompt("Mete el número para ver si es par o impar:", 0));
 }
@@ -286,3 +288,36 @@ if (numeroParOImpar % 2 === 0) {
 } else {
   alert("El número " + numeroParOImpar + " es IMPAR");
 }
+
+/*
+
+Ejercicio 21:
+
+Calculadora:
+- Pida dos números por pantalla
+- Si metemos uno mal que nos los vuelva a pedir
+- En una alerta y por la consola el resultado de
+  sumar, restar, multiplicar y dividir esas dos cifras
+
+*/
+
+let n1;
+let n2;
+
+alert("Ejercicio 21");
+
+while (n1 < 0 || n2 < 0 || isNaN(n1) || isNaN(n2)) {
+  n1 = parseInt(prompt("Mete el primer número"));
+  n2 = parseInt(prompt("Mete el segundo número"));
+}
+
+let resultado = `
+Suma: ${n1 + n2}
+Resta: ${n1 - n2}
+Multiplicación: ${n1 * n2}
+División: ${n1 / n2}
+Resto: ${n1 % n2}
+`;
+
+alert(resultado);
+console.log(resultado);
