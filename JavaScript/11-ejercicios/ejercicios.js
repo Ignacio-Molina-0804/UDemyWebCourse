@@ -214,3 +214,34 @@ for (let i = numeroIngresado1; i <= numeroIngresado2; i++){
     }
 
 }
+
+/* 
+
+Ejercicio 18
+
+Tenemos una coleccion desde el 1 al 17
+
+Y el usuario tiene que adivinar cual es el elegido
+
+Haz un programa para que pueda adivinar el numero
+
+*/
+
+const numeroRespuesta = Math.floor(Math.random() * 17) + 1;
+let numeroParaAdivinar = 0;
+
+do {
+    numeroParaAdivinar = parseInt(prompt("Ingresa un número entre el 1 y el 17 para ver si adivinas el número."));
+
+    while (numeroParaAdivinar <= 0 || isNaN(numeroParaAdivinar) || numeroParaAdivinar > 17) {
+        alert("Lo que ingresaste no es un número válido (1 a 17)");
+        numeroParaAdivinar = parseInt(prompt("Ingresa un número entre el 1 y el 17 para ver si adivinas el número."));
+    }
+
+    if (numeroParaAdivinar !== numeroRespuesta) {
+        alert("El número ingresado no es el correcto, intenta de nuevo...");
+    } else {
+        alert("¡El número ingresado es el correcto, felicidades!!!");
+    }
+
+} while (numeroParaAdivinar !== numeroRespuesta);
