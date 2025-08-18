@@ -64,6 +64,8 @@ let saltos = 17
 
 let distanciaRecorrida = 0
 
+alert("Ejercicio 13");
+
 for(let contador = 1; contador <= saltos; contador++){
 
     distanciaRecorrida += distanciaDeSalto
@@ -84,6 +86,8 @@ Preguntale al usuario que genero de musica quiere (pop, rock o rap)
 Segun lo que prefiera que devuelva un mensaje diferente
 
 */
+
+alert("Ejercicio 14");
 
 let genero = prompt("¿Que genero de musica prefieres? (Rock, Pop, Rap)").toLowerCase()
 
@@ -125,6 +129,8 @@ let numIntroducido = 0
 let suma = 0
 let contador = 0
 
+alert("Ejercicio 15");
+
 do {
 
     let numIntroducido = parseInt(prompt("Ingrese un numero para sumar y sacar la media de todo (Cuando quiera que termine el proceso mande un numero negativo)"))
@@ -144,4 +150,6 @@ do {
 
 alert (`La suma de los numeros es: ${suma}`)
 alert (`La media de los numeros es: ${suma/contador}`)
+
+/* */
 
