@@ -130,3 +130,14 @@ let masNumeros = [6, 7, 8, 9, 10];
 let todosLosNumeros = [...numeros, ...masNumeros];
 
 console.log(todosLosNumeros); // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+/// Funciones Anonimas
+// Las funciones anónimas son funciones sin nombre que se pueden asignar a variables,
+// pasar como argumentos a otras funciones o usar como callbacks.
+
+let funcionAnonima = function() {
+  console.log("¡Hola desde una función anónima!");
+}
+
+
+
