@@ -141,3 +141,39 @@ let funcionAnonima = function() {
 
 
 
+/// Funciones Callback
+// Las funciones callback son funciones que se pasan como argumentos a otras funciones,
+// permitiendo que una función sea llamada después de que otra haya terminado su ejecución.
+
+let veces = 0
+
+setInterval(function() {
+  veces++;
+  console.log("Han pasado " + veces + " segundos");
+}, 1000);
+
+// Funcion de Callback Avanzada
+// Función que recibe dos números y dos callbacks
+
+function restame(n1, n2, mostrar, multiplicarPorTres) {
+    let resta = n1 - n2;
+
+    // Ejecuta la primera función (mostrar)
+    mostrar(resta);
+
+    // Ejecuta la segunda función (multiplicarPorTres)
+    multiplicarPorTres(resta);
+
+    return resta;
+}
+
+// Uso de la función con callbacks
+restame(
+    20, 5, 
+    function(resultado) {   // Primer callback
+        console.log("La resta es: " + resultado);
+    },
+    function(resultado) {   // Segundo callback
+        console.log("La resta x 3 es: " + (resultado * 3));
+    }
+);
