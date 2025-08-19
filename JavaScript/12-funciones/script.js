@@ -53,3 +53,56 @@ alert(mensajeFinalConParametrosOpcionales);
 
 saludoConParametrosOpcionales("María");
 
+// Funciones dentro de funciones
+// Una función puede llamar a otra función dentro de su cuerpo, lo que permite
+// estructurar el código de manera más modular y reutilizable.
+
+function operaciones(numero1, numero2) {
+    let resultados = {
+        "suma": (numero1 + numero2),
+        "resta": (numero1 - numero2),
+        "multiplicacion": (numero1 * numero2),
+        "division": (numero1 / numero2)
+    };
+
+    return resultados;
+}
+
+function porConsola(numero1, numero2) {
+    let resultados = operaciones(numero1, numero2);
+
+    console.log("Suma: " + resultados.suma);
+    console.log("Resta: " + resultados.resta);
+    console.log("Multiplicación: " + resultados.multiplicacion);
+    console.log("División: " + resultados.division);
+
+    return true;
+}
+
+function porPantalla(numero1, numero2) {
+    let resultados = operaciones(numero1, numero2);
+
+    let html = `
+        <h2>Calculadora</h2>
+        <h2>Suma: ${resultados.suma}</h2>
+        <h2>Resta: ${resultados.resta}</h2>
+        <h2>Multiplicación: ${resultados.multiplicacion}</h2>
+        <h2>División: ${resultados.division}</h2>
+    `;
+
+    document.getElementById("resultado").innerHTML = html;
+    return true;
+}
+
+function calculadora(numero1, numero2, mostrar = false) {
+    if (mostrar === false) {
+        porConsola(numero1, numero2);
+    } else {
+        porPantalla(numero1, numero2);
+    }
+    return true;
+}
+
+// Ejemplos
+calculadora(7, 9);        // Consola
+calculadora(7, 12, true); // Pantalla
