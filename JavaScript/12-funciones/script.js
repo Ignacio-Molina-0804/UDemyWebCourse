@@ -53,7 +53,7 @@ alert(mensajeFinalConParametrosOpcionales);
 
 saludoConParametrosOpcionales("María");
 
-// Funciones dentro de funciones
+/// Funciones dentro de funciones
 // Una función puede llamar a otra función dentro de su cuerpo, lo que permite
 // estructurar el código de manera más modular y reutilizable.
 
@@ -106,3 +106,17 @@ function calculadora(numero1, numero2, mostrar = false) {
 // Ejemplos
 calculadora(7, 9);        // Consola
 calculadora(7, 12, true); // Pantalla
+
+/// Parametros ...REST
+// El parámetro rest permite representar un número indefinido de argumentos
+// como un array, facilitando la gestión de múltiples valores en una función.
+
+function listadoFrutas(fruta1, fruta2, ...resto_de_frutas){
+
+  console.log("Fruta 1: " + fruta1)
+  console.log("Fruta 1: " + fruta2)
+  console.log(resto_de_frutas)
+
+}
+
+listadoFrutas("Naranja", "Manzana", "Pera", "Sandía", "Melón", "Coco");
