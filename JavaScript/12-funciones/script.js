@@ -1,4 +1,4 @@
-// Funciones
+/// Funciones
 // Una función agrupa una serie de instrucciones para poder usarlas varias veces
 // Es una agrupación reutilizable de un conjunto de instrucciones
 
@@ -14,9 +14,11 @@ let mensajeFinal = saludo();
 
 alert(mensajeFinal);
 
-// Funciones con Parametros
+/// Funciones con Parametros
+// Los parámetros son variables que se definen en la declaración de la función
+// y que se pueden usar dentro de la función para personalizar su comportamiento.
 
-function saludo2(nombre, plato) {
+function saludoConParametros(nombre, plato) {
   console.log("Hola, abuelita " + nombre + "!!");
   console.log("¿Qué tal estás?");
   console.log("¿Me pasas la receta de tu " + plato + "??");
@@ -25,12 +27,29 @@ function saludo2(nombre, plato) {
   return "Abuela " + nombre + " saludada correctamente!!";
 }
 
-let mensajeFinal2 = saludo("Juani", "lentejas");
+let mensajeFinalConParametros = saludoConParametros("Juani", "lentejas");
 
-alert(mensajeFinal2);
+alert(mensajeFinalConParametros);
 
-saludo2("María", "tortilla");
-saludo2("Pepa", "espaguetis");
-saludo2("Paz", "bocadillo campero");
-saludo2("Laura", "potaje");
+saludoConParametros("Laura", "potaje");
+
+/// Funciones con Parametros Opcionales
+// Los parámetros opcionales permiten que una función pueda ser llamada sin
+// proporcionar todos los argumentos definidos, asignando un valor por defecto
+// a aquellos que no se proporcionen.
+
+function saludoConParametrosOpcionales(nombre, plato = "Bife a la Criolla") {
+  console.log("Hola, abuelita " + nombre + "!!");
+  console.log("¿Qué tal estás?");
+  console.log("¿Me pasas la receta de tu " + plato + "??");
+  console.log("********************");
+
+  return "Abuela " + nombre + " saludada correctamente!!";
+}
+
+let mensajeFinalConParametrosOpcionales = saludoConParametros("Juani");
+
+alert(mensajeFinalConParametrosOpcionales);
+
+saludoConParametrosOpcionales("María");
 
