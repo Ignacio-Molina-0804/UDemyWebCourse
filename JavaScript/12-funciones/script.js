@@ -58,24 +58,20 @@ saludoConParametrosOpcionales("María");
 // estructurar el código de manera más modular y reutilizable.
 
 function operaciones(numero1, numero2) {
-    let resultados = {
-        "suma": (numero1 + numero2),
-        "resta": (numero1 - numero2),
-        "multiplicacion": (numero1 * numero2),
-        "division": (numero1 / numero2)
+    return {
+        suma: numero1 + numero2,
+        resta: numero1 - numero2,
+        multiplicacion: numero1 * numero2,
+        division: numero1 / numero2
     };
-
-    return resultados;
 }
 
 function porConsola(numero1, numero2) {
     let resultados = operaciones(numero1, numero2);
-
     console.log("Suma: " + resultados.suma);
     console.log("Resta: " + resultados.resta);
     console.log("Multiplicación: " + resultados.multiplicacion);
     console.log("División: " + resultados.division);
-
     return true;
 }
 
@@ -179,6 +175,7 @@ restame(
 );
 
 /// Ambito variables o Scope
+// El ámbito de una variable determina dónde puede ser accedida y utilizada en el código.
 
 // Global
 let ruta = "https://www.google.com";
@@ -207,4 +204,18 @@ function mostrarRutaBloque() {
     // console.log(rutaBloque); // Esto causaría un error porque rutaBloque no está definida fuera del bloque
 }
 mostrarRutaBloque();
+
+/// Hoisting
+// El hoisting es un comportamiento de JavaScript donde las declaraciones de variables y funciones
+// se mueven al inicio de su contexto de ejecución, permitiendo que se puedan usar antes de ser declaradas.
+
+saludar();
+
+function saludar() {
+    console.log("¡Hola desde la función saludar!");
+}
+
+// Aunque la función se declara después de su llamada, JavaScript la reconoce debido al hoisting.
+
+
 
