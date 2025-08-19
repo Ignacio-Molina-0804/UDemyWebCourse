@@ -217,5 +217,33 @@ function saludar() {
 
 // Aunque la función se declara después de su llamada, JavaScript la reconoce debido al hoisting.
 
+/// Funciones Flecha
+// Las funciones flecha son una forma más concisa de escribir funciones en JavaScript.
 
+// Definir funcion
 
+let declaracionFuncionFlecha = () => {
+
+  console.log("Una Funcion Flecha de Declaracion");
+  
+}
+
+declaracionFuncionFlecha();
+
+// Definir funcion con parametros
+
+let declaracionFuncionFlechaConParametros = (nombre, edad) => {
+
+  console.log("Una Funcion Flecha de Declaracion con Parametros");
+  console.log("Nombre: " + nombre);
+  console.log("Edad: " + edad);
+
+}
+
+declaracionFuncionFlechaConParametros("Nacho", 20);
+
+// Utilizar en un callback
+
+setTimeout(() => {
+  console.log("Una Funcion Flecha de Callback");
+}, 2000);
