@@ -177,3 +177,34 @@ restame(
         console.log("La resta x 3 es: " + (resultado * 3));
     }
 );
+
+/// Ambito variables o Scope
+
+// Global
+let ruta = "https://www.google.com";
+
+function mostrarRuta() {
+    console.log("La ruta es: " + ruta);
+}
+
+mostrarRuta();
+
+// Local
+function mostrarRutaLocal() {
+    let rutaLocal = "https://www.localhost.com";
+    console.log("La ruta local es: " + rutaLocal);
+}
+
+mostrarRutaLocal();
+// console.log(rutaLocal); // Esto causaría un error porque rutaLocal no está definida en este ámbito
+
+// Bloque
+function mostrarRutaBloque() {
+    if (true) {
+        let rutaBloque = "https://www.bloque.com";
+        console.log("La ruta bloque es: " + rutaBloque);
+    }
+    // console.log(rutaBloque); // Esto causaría un error porque rutaBloque no está definida fuera del bloque
+}
+mostrarRutaBloque();
+
