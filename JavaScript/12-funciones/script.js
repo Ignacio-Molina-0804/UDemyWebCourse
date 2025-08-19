@@ -13,3 +13,24 @@ function saludo() {
 let mensajeFinal = saludo();
 
 alert(mensajeFinal);
+
+// Funciones con Parametros
+
+function saludo2(nombre, plato) {
+  console.log("Hola, abuelita " + nombre + "!!");
+  console.log("¿Qué tal estás?");
+  console.log("¿Me pasas la receta de tu " + plato + "??");
+  console.log("********************");
+
+  return "Abuela " + nombre + " saludada correctamente!!";
+}
+
+let mensajeFinal2 = saludo("Juani", "lentejas");
+
+alert(mensajeFinal2);
+
+saludo2("María", "tortilla");
+saludo2("Pepa", "espaguetis");
+saludo2("Paz", "bocadillo campero");
+saludo2("Laura", "potaje");
+
