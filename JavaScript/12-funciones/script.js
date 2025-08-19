@@ -120,3 +120,13 @@ function listadoFrutas(fruta1, fruta2, ...resto_de_frutas){
 }
 
 listadoFrutas("Naranja", "Manzana", "Pera", "Sandía", "Melón", "Coco");
+
+/// Operador Spread
+// El operador spread permite expandir un array en lugares donde se esperan múltiples elementos,
+// facilitando la creación de nuevos arrays o la llamada a funciones con múltiples argumentos.
+
+let numeros = [1, 2, 3, 4, 5];
+let masNumeros = [6, 7, 8, 9, 10];
+let todosLosNumeros = [...numeros, ...masNumeros];
+
+console.log(todosLosNumeros); // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
