@@ -124,3 +124,23 @@ if (fraseFin.endsWith("divertido")) {
 let palabraRepetida = "Hola";
 let repeticion = palabraRepetida.repeat(3); // "HolaHolaHola"
 console.log(repeticion); // "HolaHolaHola"
+
+// BUSCAR PALABRAS EN UN TEXTO
+// Ejemplo con search y match
+
+let texto3 = "Pablito clavó un clavito, después lo volvió a clavar.";
+
+// --- Usando search ---
+// Devuelve el índice de la primera coincidencia
+let indice = texto3.search(/clavó/);
+console.log("search -> índice de la primera coincidencia:", indice);
+
+// --- Usando match ---
+// Devuelve un array con todas las coincidencias (con flag "g")
+let coincidencias = texto3.match(/clav\w+/g);
+console.log("match -> todas las coincidencias encontradas:", coincidencias);
+
+// --- Comparación ---
+// Si no encuentra nada:
+console.log("search de 'martillo':", texto.search(/martillo/)); // -1
+console.log("match de 'martillo':", texto.match(/martillo/));   // null
