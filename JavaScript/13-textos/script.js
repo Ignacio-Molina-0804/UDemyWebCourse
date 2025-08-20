@@ -30,7 +30,57 @@ let palabra = "seguramente";
 
 // includes(palabra) → verifica si la palabra existe en la cadena
 if (eslogan.includes(palabra)) {
-    console.log("La palabra SEGURAMENTE sí existe en el eslogan");
+    console.log(`La palabra ${palabra} sí existe en el eslogan`);
 } else {
     console.log("¡Qué dices loco!! esa palabra no existe");
 }
+
+/// BUSCAR LA POSICION DE UNA PALABRA
+
+let mensaje = "Programacion con JavaScript";
+let palabraBuscada = "JavaScript";
+
+console.log(mensaje.indexOf(palabraBuscada)); // 15
+
+/// EXTRAER PARTE DE UN TEXTO
+
+let texto = "Curso de JavaScript desde cero";
+let textoExtraido = texto.slice(0, 6); // "Curso"
+
+/// REMPLAZAR PARTE DE UN TEXTO
+
+let peliculaOriginal = "Tonto Re Tonto"
+
+// Remplazando solo el primer "Tonto"
+
+console.log(
+
+    peliculaOriginal.replace("Tonto", "Loco") // "Loco Re Tonto"
+
+)
+
+// Remplazando todos los "Tonto"
+
+console.log(
+
+    peliculaOriginal.replaceAll("Tonto", "Loco") // "Loco Re Loco"
+
+)
+
+/// TRIM O ELIMINAR ESPACIOS EN BLANCO
+
+let email = "        pepitogamer@gmail.com        "
+
+console.log(
+
+    email.trim() // "pepitogamer@gmail.com"
+
+)
+
+/// DIVIDIR UNA CADENA EN DISTINTAS PARTES
+
+let cadena = "JavaScript,HTML,CSS,React,Node.js";
+
+let partes = cadena.split(",");
+
+console.log(partes); // ["JavaScript", "HTML", "CSS", "React", "Node.js"]
