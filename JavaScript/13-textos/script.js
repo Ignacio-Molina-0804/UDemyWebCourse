@@ -84,3 +84,43 @@ let cadena = "JavaScript,HTML,CSS,React,Node.js";
 let partes = cadena.split(",");
 
 console.log(partes); // ["JavaScript", "HTML", "CSS", "React", "Node.js"]
+
+/// SUBSTRING
+
+let curso = "Curso de REACT"
+
+let subCurso = curso.substring(6, 11); // "de RE"
+
+console.log(subCurso); // "de RE"
+
+/// CONCATENAR CADENAS
+
+let texto1 = "Hola";
+let texto2 = "Mundo";
+
+let textoConcatenado = texto1 + " " + texto2; // "Hola Mundo"
+textoConcatenado = texto1.concat(" ", texto2); // "Hola Mundo"
+
+console.log(textoConcatenado); // "Hola Mundo"
+
+/// COMPROBAR SI COMIENZA CON UNA PALABRA EN ESPECIFICO
+
+let fraseInicio = "JavaScript es un lenguaje de programación";
+
+if (fraseInicio.startsWith("JavaScript")) {
+    console.log("La frase comienza con 'JavaScript'");
+}
+
+/// COMPROBAR SI TERMINA CON UNA PALABRA EN ESPECIFICO
+
+let fraseFin = "Aprender JavaScript es divertido";
+
+if (fraseFin.endsWith("divertido")) {
+    console.log("La frase termina con 'divertido'");
+}
+
+/// REPETIR PALABRAS
+
+let palabraRepetida = "Hola";
+let repeticion = palabraRepetida.repeat(3); // "HolaHolaHola"
+console.log(repeticion); // "HolaHolaHola"
