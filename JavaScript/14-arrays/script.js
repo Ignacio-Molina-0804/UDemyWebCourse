@@ -78,3 +78,34 @@ let actoresNuevos = actores.map(actor => {
 
 console.log("Actores Nuevos: ", actoresNuevos);
 
+// Arrays Multidimensionales
+
+let categorias = ["Lucha", "Acción", "Aventura", "Ciencia Ficción", "Terror"];
+let titulos = ["Street Fighter", "Call of Duty", "The Legend of Zelda", "Star Wars", "Resident Evil"];
+
+let videojuegos = [categorias, titulos];
+
+console.log(videojuegos) // Vista General
+console.log(videojuegos[1][2]) // Acceso a un elemento especifico de los titulos
+
+// Arrays Bidimensionales
+
+let tabla = [
+    ["Producto", "Cantidad", "Precio"],
+    ["PC",            5,         1000],
+    ["Televisor",     8,         1200]
+]
+
+console.log("Producto: " + tabla[2][0] + ", Precio: " + tabla[2][2]); // "Producto: Televisor, Precio: 1200"
+
+tabla.forEach((fila, index) => {
+    console.log("Fila " + index + ": " + fila.join(", "));
+});
+
+// Ver por consola una tabla de datos
+
+console.table(tabla);
+
+
+
+
