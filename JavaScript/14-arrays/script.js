@@ -31,7 +31,7 @@ for (let i = 0; i < nombres.length; i++) {
     
 }
 
-// Bucles para recorrer arrays
+/// Bucles para recorrer arrays
 
 console.log("*****************************")
 
@@ -78,7 +78,7 @@ let actoresNuevos = actores.map(actor => {
 
 console.log("Actores Nuevos: ", actoresNuevos);
 
-// Arrays Multidimensionales
+/// Arrays Multidimensionales
 
 let categorias = ["Lucha", "Acción", "Aventura", "Ciencia Ficción", "Terror"];
 let titulos = ["Street Fighter", "Call of Duty", "The Legend of Zelda", "Star Wars", "Resident Evil"];
@@ -88,7 +88,7 @@ let videojuegos = [categorias, titulos];
 console.log(videojuegos) // Vista General
 console.log(videojuegos[1][2]) // Acceso a un elemento especifico de los titulos
 
-// Arrays Bidimensionales
+/// Arrays Bidimensionales
 
 let tabla = [
     ["Producto", "Cantidad", "Precio"],
@@ -106,6 +106,29 @@ tabla.forEach((fila, index) => {
 
 console.table(tabla);
 
+/// Arrays Tridimensionales
+
+let cartaRestaurante = [
+  ["Plato",       "Cantidad", "Precios",          "Tamaños"],
+  ["Menu Pizza",  2,          [8, 10, 15],        ["pequeño", "mediano", "grande"]],
+  ["Menu Burger", 4,          [10, 12, 17],       ["pequeño", "mediano", "grande"]],
+  ["Menu Paella", 10,         [14, 18, 25],       ["pequeño", "mediano", "grande"]],
+];
+
+
+for (let menu of cartaRestaurante) {
+  console.log("----------------------------");
+
+  console.log(menu);
+
+  if (Array.isArray(menu[2]) && Array.isArray(menu[3])) {
+    console.log(menu[0]);
+
+    for (let index in menu[2]) {
+      console.log(menu[3][index], menu[2][index], "euros");
+    }
+  }
+}
 
 
 
