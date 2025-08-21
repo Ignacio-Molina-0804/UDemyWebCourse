@@ -44,3 +44,8 @@ console.log(existe)
 
 let gadgetsB = gadgets.filter(gadget => gadget.includes("a"))
 console.log(gadgetsB);
+
+// Reduce
+
+let suma = [1, 2, 3, 4].reduce((acumulador, valorActual) => acumulador + valorActual, 0);
+console.log(suma); // 10
