@@ -22,3 +22,12 @@ if (elemento >= nombres.length) {
 } else {
     alert("¡Bieeen!! El usuario seleccionado es " + nombres[elemento]);
 }
+
+// Recorrer un array con un bucle for
+console.log("Recorriendo el array con un bucle for:");
+for (let i = 0; i < nombres.length; i++) {
+
+    console.log("Usuario " + i + ": " + nombres[i]);
+    
+
+}
