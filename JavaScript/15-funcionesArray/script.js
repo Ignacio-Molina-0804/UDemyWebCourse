@@ -46,6 +46,37 @@ let gadgetsB = gadgets.filter(gadget => gadget.includes("a"))
 console.log(gadgetsB);
 
 // Reduce
-
-let suma = [1, 2, 3, 4].reduce((acumulador, valorActual) => acumulador + valorActual, 0);
+let numeros = [1, 2, 3, 4]
+let suma = numeros.reduce((acumulador, valorActual) => acumulador + valorActual, 0);
 console.log(suma); // 10
+
+// Ordenar un array
+
+gadgets.sort();
+console.log(gadgets);
+
+// Invertir el orden de un array
+gadgets.reverse();
+console.log(gadgets);
+
+// Combinar Arrays
+
+let union = gadgets.concat(numeros)
+console.log(union);
+
+// Convertir un array a string
+let gadgetsString = gadgets.join(", ");
+console.log(gadgetsString); // "Smart TV, Tablet, PC, Laptop"
+
+// Copiar porcion de un array
+let gadgetsCopia = gadgets.slice(1, 3);
+
+// Busqueda
+
+let buscarGadget = gadgets.find(gadget => gadget.length > 5);
+console.log(buscarGadget); 
+
+// Busqueda por indice
+
+let buscarIndice = gadgets.findIndex(gadget => gadget.length > 5);
+console.log(buscarIndice); // 1 (índice de "Tablet")
