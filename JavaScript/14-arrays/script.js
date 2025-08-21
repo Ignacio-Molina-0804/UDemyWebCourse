@@ -13,3 +13,12 @@ console.log(nombres.length); // 5
 // Asignar un nuevo valor a un elemento del array
 nombres[0] = "Ignacio Perez";
 console.log(nombres[0]); // "Ignacio Perez"
+
+// Practica
+let elemento = parseInt(prompt("¿Qué usuario quieres (del array)?", 0));
+
+if (elemento >= nombres.length) {
+    alert("¡Upps!! Ese usuario en concreto no existe, elige otro!!");
+} else {
+    alert("¡Bieeen!! El usuario seleccionado es " + nombres[elemento]);
+}
