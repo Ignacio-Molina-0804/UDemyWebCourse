@@ -39,3 +39,8 @@ console.log(indice)
 
 let existe = gadgets.includes("Celular")
 console.log(existe)
+
+// Filtrar un array
+
+let gadgetsB = gadgets.filter(gadget => gadget.includes("a"))
+console.log(gadgetsB);
