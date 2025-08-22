@@ -128,6 +128,20 @@ let array2 = ["D", "E", "F"]
 let arrayExpandido = [...array1, ...array2]
 console.log(arrayExpandido); // ["A", "B", "C", "D", "E", "F"]
 
+// De array a string
+
+console.log(gadgets.toString()); // "Smart TV,Tablet,PC,Laptop"
+
+// De String a array
+
+let frase = "Hola como estas"
+let palabras = frase.split(" ")
+console.log(palabras); // ["Hola", "como", "estas"]
+
+// Pasar a seo slug
+
+let slug = palabras.join("-").toLowerCase()
+console.log(slug); // "hola-como-estas"
 
 
 
