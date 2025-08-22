@@ -80,3 +80,60 @@ console.log(buscarGadget);
 
 let buscarIndice = gadgets.findIndex(gadget => gadget.length > 5);
 console.log(buscarIndice); // 1 (índice de "Tablet")
+
+// SOME
+
+let letrasE = gadgets.some(gadget => gadget.includes("e"));
+console.log(letrasE); // true (porque "Celular" y "Laptop" contienen "e")
+
+// EVERY
+
+let letrasA = gadgets.every(gadget => gadget.includes("a"));
+console.log(letrasE); // false (no todos los elementos contienen "a")
+
+// Aplanar un array 
+
+let decadas = [[1990, 1991, 1992], [2000, 2001, 2002], [2010, 2011, 2012, [2013, 2014, [2015, 2016]]]];
+
+let decadasPlanas = decadas.flat(3);
+console.log(decadasPlanas);
+
+// CopyWithin
+
+let fechas = ["01-01-1990", "01-01-2000", "01-01-2010", "01-01-2020"];
+fechas.copyWithin(0, 3)
+
+console.log(fechas); // ["01-01-2020", "01-01-2000", "01-01-2010", "01-01-2020"]
+
+// Convertir un string a array
+
+let nombre = "Pepito"
+let nombreArray = Array.from(nombre)
+console.log(nombreArray); // ["P", "e", "p", "i", "t", "o"]
+
+// Desestructuracion
+
+let [uno, dos, tres, ...resto] = ["Primero", "Segundo", "Tercero", "Cuarto", "Quinto"]
+
+console.log(uno); // "Primero"
+console.log(dos); // "Segundo"
+console.log(tres); // "Tercero"
+console.log(resto); // ["Cuarto", "Quinto"]
+
+// Expandir arrays
+
+let array1 = ["A", "B", "C"]
+let array2 = ["D", "E", "F"]
+
+let arrayExpandido = [...array1, ...array2]
+console.log(arrayExpandido); // ["A", "B", "C", "D", "E", "F"]
+
+
+
+
+
+
+
+
+
+
