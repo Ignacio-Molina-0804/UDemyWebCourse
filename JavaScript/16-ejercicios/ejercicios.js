@@ -85,3 +85,83 @@ heroes.forEach(heroe => console.log(`¡El héroe ${heroe.slice(2)} está aquí p
 console.log("--------------------------------");
 
 villanos.forEach(villano => console.log(`¡Cuidado! El villano ${villano.slice(2)} está causando problemas!`));
+
+/*
+Ejercicio 28:
+
+1. Pide 6 números por pantalla y mételos en un array
+2. Muestra el array entero (todos sus elementos)
+   en el cuerpo de la página y en la consola
+3. Ordénalo y muéstralo
+4. Invierte su orden y muéstralo
+5. Muestra cuántos elementos tiene el array
+6. Busca uno de los valores que ha metido el usuario,
+   que nos diga si lo encuentra y su índice
+*/
+
+alert("Ejercicio 28: ")
+
+function pedidoDeNumeros() {
+
+    let numeros = [];
+
+    for (let i = 0; i < 6; i++) {
+
+        let numero = parseInt(prompt("Introduce un número: "));
+        while (isNaN(numero)) {
+            numero = parseInt(prompt("Por favor, introduce un número válido: "));
+        }
+        numeros.push(numero);
+
+    }
+
+    return numeros;
+
+}
+
+function mostrarArray(array) {
+
+    console.log("Array en consola: ", array);
+    document.body.innerHTML = "Array en el cuerpo de la página: " + array.join(", ");
+    
+}
+
+function ordenarArray(array) {
+
+    return array.sort((a, b) => a - b);
+}
+
+function invertirArray(array) {
+
+    return array.reverse();
+
+}
+
+function elementosEnElArray(array) {
+
+    return array.length;
+
+}
+
+
+function buscarValor(array, valor) {
+
+    let indice = array.indexOf(valor);
+    if (indice !== -1) {
+        return `El valor ${valor} se encuentra en el índice ${indice}.`;
+    } else {
+        return `El valor ${valor} no se encuentra en el array.`;
+    }
+}
+
+let numeros = pedidoDeNumeros();
+mostrarArray(numeros);
+let numerosOrdenados = ordenarArray([...numeros]);
+console.log("Array ordenado: ", numerosOrdenados);
+let numerosInvertidos = invertirArray([...numerosOrdenados]);
+console.log("Array invertido: ", numerosInvertidos);
+console.log("Número de elementos en el array: ", elementosEnElArray(numeros));
+let valorABuscar = parseInt(prompt("Introduce un número para buscar en el array: "));
+console.log(buscarValor(numeros, valorABuscar));
+
+
