@@ -197,4 +197,28 @@ function contarVocales(palabra) {
 
 alert(`La palabra "${palabra}" tiene ${contarVocales(palabra)} vocales.`);
 
+/*
+
+Ejercicio 30:
+
+Crea una funcion que reciba un numero y devuelva un factorial.
+
+*/
+
+let numeroFactorial = parseInt(prompt("Introduce un número para calcular su factorial: "));
+
+let calcularFactorial = (numero) => {
+
+    if (numero < 0) return "El factorial no está definido para números negativos.";
+    if (numero === 0 || numero === 1) return 1;
+
+    let resultado = 1;
+    for (let i = 2; i <= numero; i++) {
+        resultado = resultado * i;
+    }
+    
+    return resultado;
+
+}
+
 
