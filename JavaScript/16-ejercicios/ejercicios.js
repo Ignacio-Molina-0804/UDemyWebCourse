@@ -62,3 +62,26 @@ function contarletras(datos) {
 }
 
 console.log(contarletras(luchadores)); // [7, 6, 6, 7, 9]
+
+/* 
+
+Ejercicio 27:
+
+Crea un array de personajes de peliculas y clasificalos en grupos (heroes, villanos, etc)
+
+Muestra un mensaje para cada grupo
+
+*/
+
+alert("Ejercicio 27: ")
+
+let personajes = ["M:Joker", "H:Batman", "H:Wonder Woman", "M:Lex Luthor", "H:Superman", "M:Harley Quinn"];
+
+let heroes = personajes.filter(personaje => personaje.startsWith("H:"));
+let villanos = personajes.filter(personaje => personaje.startsWith("M:"));
+
+heroes.forEach(heroe => console.log(`¡El héroe ${heroe.slice(2)} está aquí para salvar el día!`));
+
+console.log("--------------------------------");
+
+villanos.forEach(villano => console.log(`¡Cuidado! El villano ${villano.slice(2)} está causando problemas!`));
