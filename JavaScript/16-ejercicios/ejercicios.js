@@ -164,4 +164,37 @@ console.log("Número de elementos en el array: ", elementosEnElArray(numeros));
 let valorABuscar = parseInt(prompt("Introduce un número para buscar en el array: "));
 console.log(buscarValor(numeros, valorABuscar));
 
+/* 
+
+Ejercicio 29:
+
+Crea una funcion que reciba una palabra y devuelva cuantas vocales tiene.
+
+*/
+
+alert("Ejercicio 29: ")
+
+let palabra = prompt("Introduce una palabra: ").toLowerCase();
+
+const vocales = ['a', 'e', 'i', 'o', 'u'];
+
+function contarVocales(palabra) {
+
+    let contador = 0;
+
+    for (let letra of palabra) {
+
+        if (vocales.includes(letra)) {
+
+            contador++;
+
+        }
+
+    }
+
+    return contador;
+}
+
+alert(`La palabra "${palabra}" tiene ${contarVocales(palabra)} vocales.`);
+
 
