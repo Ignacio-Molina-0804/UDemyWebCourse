@@ -70,3 +70,7 @@ for (let i = 0; i < articulos.length; i++) {
 }
 
 // getElementsByTagName - Seleccionar elementos por su etiqueta HTML
+
+let etiquetas = document.getElementsByTagName("article");
+console.log(etiquetas);
+etiquetas[0].innerHTML += "<hr> Primer artículo modificado desde JS";
