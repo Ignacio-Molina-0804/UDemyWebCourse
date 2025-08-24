@@ -75,9 +75,9 @@ let etiquetas = document.getElementsByTagName("article");
 console.log(etiquetas);
 etiquetas[0].innerHTML += "<hr> Primer artículo modificado desde JS";
 
-// Recomendable - QuerySelector
+// RECOMENDABLE - QuerySelector
 
-let seccionArticulos = document.querySelector("#articulos")
+let seccionArticulos = document.querySelector("#articulos");
 console.log(seccionArticulos);
 seccionArticulos.style.background = "#ccc";
 seccionArticulos.style.padding = "20px";
@@ -89,3 +89,32 @@ seccionArticulos.style.border = "2px solid black";
 let titulo = document.querySelector(".Titulo");
 console.log(titulo);
 
+// RECOMENDABLE - QuerySelectorAll
+
+let todosLosArticulos = document.querySelectorAll(".article");
+console.log(todosLosArticulos);
+
+todosLosArticulos.forEach((articulo, i) => {
+  articulo.classList.add("articleBase");
+
+  // Añadir un nodo del DOM
+  let enlace = document.createElement("a");
+  enlace.setAttribute("href", "https://google.com");
+  enlace.setAttribute("target", "_blank");
+  enlace.style.color = "green";
+
+  let textoEnlace = document.createTextNode("Sigue leyendo");
+  enlace.append(textoEnlace);
+
+  articulo.append(enlace);
+
+  if ((i + 1) % 2 == 0) {
+    articulo.classList.add("articlePar");
+    articulo.innerHTML += "<hr> Artículo par modificado desde JS";
+  }
+
+  if (i === articulos.length - 1) {
+    articulo.classList.add("articleUltimo");
+    articulo.innerHTML += "<hr> Último artículo modificado desde JS";
+  }
+});
