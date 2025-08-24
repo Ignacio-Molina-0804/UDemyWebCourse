@@ -34,4 +34,16 @@ window.setInterval(() => {
 
 console.log(window.scrollX, window.scrollY); // Devuelve la posición de los ejes X y Y
 
+/// Navigator
 
+console.log(navigator)
+
+if(!navigator.onLine){
+
+    alert("Estas offline, conectate a internet")    
+
+} else {
+
+    alert("Muy bien, estas conectado a internet!!")
+
+}
