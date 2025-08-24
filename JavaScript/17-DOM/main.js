@@ -136,3 +136,21 @@ tarjeta.style.textAlign = "center";
 tarjeta.style.borderRadius = "10px";
 tarjeta.style.margin = "20px auto";
 
+// Agregar y Remover elementos del DOM
+
+tarjeta.classList.add("NuevaClase");
+tarjeta.classList.remove("NuevaClase");
+tarjeta.classList.toggle("NuevaClase"); // Si la clase existe la elimina y si no existe la agrega
+
+// Crear Atributos
+
+const titular = document.createElement("h2");
+titular.textContent = "Este es el titular de la tarjeta";
+
+// Agregar contenido al DOM
+tarjeta.appendChild(titular);
+tarjeta.insertBefore(titular, tarjeta.firstChild); // Inserta el elemento antes del nodo indicado
+
+// Eliminar nodos del DOM
+
+tarjeta.querySelector("Strong").remove();
