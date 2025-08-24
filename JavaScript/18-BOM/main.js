@@ -56,3 +56,10 @@ console.log(location.hostname) // Devuelve el dominio en el caso que este tenga 
 // location.href = "https://google.com" // Si descomentas esto cambiarias a lo que te redirecciona al momento de iniciar la aplicacion
 
 // location.reload() // Sirve para recargar la pagina en la que estas
+
+/// History
+
+history.back();      // Ir atrás una página
+history.forward();   // Ir adelante una página
+history.go();        // Moverse en el historial (0 = recargar)
+history.length;      // Cantidad de páginas en el historial
