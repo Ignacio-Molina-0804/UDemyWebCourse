@@ -74,3 +74,18 @@ for (let i = 0; i < articulos.length; i++) {
 let etiquetas = document.getElementsByTagName("article");
 console.log(etiquetas);
 etiquetas[0].innerHTML += "<hr> Primer artículo modificado desde JS";
+
+// Recomendable - QuerySelector
+
+let seccionArticulos = document.querySelector("#articulos")
+console.log(seccionArticulos);
+seccionArticulos.style.background = "#ccc";
+seccionArticulos.style.padding = "20px";
+seccionArticulos.style.marginTop = "20px";
+seccionArticulos.style.border = "2px solid black";
+
+// QuerySelector y clases
+
+let titulo = document.querySelector(".Titulo");
+console.log(titulo);
+
