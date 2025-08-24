@@ -47,3 +47,12 @@ if(!navigator.onLine){
     alert("Muy bien, estas conectado a internet!!")
 
 }
+
+/// Location
+
+console.log(location.href); // Devuelve el link de la pagina en la que estas
+console.log(location.hostname) // Devuelve el dominio en el caso que este tenga uno
+
+// location.href = "https://google.com" // Si descomentas esto cambiarias a lo que te redirecciona al momento de iniciar la aplicacion
+
+// location.reload() // Sirve para recargar la pagina en la que estas
