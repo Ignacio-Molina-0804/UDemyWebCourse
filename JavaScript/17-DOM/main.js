@@ -118,3 +118,21 @@ todosLosArticulos.forEach((articulo, i) => {
     articulo.innerHTML += "<hr> Último artículo modificado desde JS";
   }
 });
+
+// Modificaciones
+
+const tarjeta = document.querySelector("#tarjeta");
+
+tarjeta.textContent = "Contenido de la tarjeta modificado desde JS";
+tarjeta.innerHTML = "<h2><strong>Contenido de la tarjeta modificado desde JS<strong></h2>";
+tarjeta.setAttribute("data-id",12);
+tarjeta.setAttribute("class","ejemploclase");
+tarjeta.getAttribute("id");
+
+tarjeta.style.background = "blue";
+tarjeta.style.color = "white";
+tarjeta.style.padding = "20px";
+tarjeta.style.textAlign = "center";
+tarjeta.style.borderRadius = "10px";
+tarjeta.style.margin = "20px auto";
+
