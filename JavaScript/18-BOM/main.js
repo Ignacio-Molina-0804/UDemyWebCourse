@@ -63,3 +63,12 @@ history.back();      // Ir atrás una página
 history.forward();   // Ir adelante una página
 history.go();        // Moverse en el historial (0 = recargar)
 history.length;      // Cantidad de páginas en el historial
+
+/// Screen
+
+console.log(screen.width, screen.height);
+
+/// Ventanas Emergentes y Pop Ups
+
+//window.open(Link de la pagina, Nombre del popup (por mas que no se muestre), parametros)
+let miWeb = window.open("https://google.com", "Ruta hacia google", "height=750,width=500,left=450,top=150");
