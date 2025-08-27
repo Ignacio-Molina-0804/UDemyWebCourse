@@ -45,3 +45,31 @@ cajaTexto.addEventListener("mousemove", () => {
     console.log("Te estas moviendo dentro del textArea");
 
 })
+
+/// Eventos de teclado
+
+let campoTexto = document.querySelector("#campoTexto");
+
+// Evento KeyDown
+
+campoTexto.addEventListener("keydown", (event) => {
+
+    console.log("Has presionado la tecla: " + event.key);
+
+})
+
+// Evento keyUp
+
+campoTexto.addEventListener("keyup", (event) => {
+
+    console.warn("Has soltado la tecla: " + event.key);
+
+})
+
+// Evento KeyPress
+
+campoTexto.addEventListener("keypress", (event) => {
+
+    console.error("Estas manteniendo pulsada la tecla: " + event.key);
+
+})
