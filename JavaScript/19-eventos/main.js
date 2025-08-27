@@ -79,9 +79,28 @@ nombreInput.addEventListener("input", () => {
 
 })
 
+// Evento Change
+
 let selectGenero = document.querySelector("#genero");
 selectGenero.addEventListener("change", () => {
 
     console.log(`Has cambiado el select a '${selectGenero.value}'`);
     
+})
+
+// Evento Focus
+
+let campoEmail = document.addEventListener("#email");
+campoEmail.addEventListener("focus", () => {
+
+    console.log("Acabas de entrar al campo de email.")
+
+})
+
+// Evento Blur
+
+campoEmail.addEventListener("blur", () => {
+
+    console.log("Has salido del campo de email.")
+
 })
