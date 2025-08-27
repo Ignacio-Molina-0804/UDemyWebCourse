@@ -109,6 +109,8 @@ campoEmail.addEventListener("blur", () => {
 
 // Evento DOMContentLoaded
 
+// Este evento hace que se cargue el DOM logrando asi que no debamos poner el refer en el script.
+
 document.addEventListener("DOMContentLoaded", () =>{
 
     // A partir de aca se pone el codigo para que se lance cuando todo el DOM esta cargado evitando poner el defer en el script.
@@ -119,6 +121,8 @@ document.addEventListener("DOMContentLoaded", () =>{
 
 // Evento Load
 
+// Este evento nos carga la pantalla pero es algo que se toma dsp del DOM
+
 window.addEventListener("load", () => {
 
     console.log("Toda la Web esta cargada, incluido los recursos")
@@ -126,6 +130,8 @@ window.addEventListener("load", () => {
 })
 
 // Evento Resize
+
+// Este evento hace que tome en el momento que cambiamos la resolucion de la pantalla.
 
 window.addEventListener("resize", () => {
 
@@ -135,8 +141,12 @@ window.addEventListener("resize", () => {
 
 // Evento Scroll
 
+// Este evento hace que tome el scroll de la pantalla y nos devuelva diferentes datos.
+
 window.addEventListener("scroll", () => {
 
     console.log(`Estas en el pixel ${Math.round(window.scrollY)} del scroll de la web.`)
 
 })
+
+/// Eventos del PortaPapeles
