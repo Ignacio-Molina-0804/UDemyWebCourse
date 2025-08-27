@@ -69,3 +69,19 @@ superFormulario.addEventListener("submit", (event) => {
   console.log(`Nombre: ${nombre}, Email: ${email}, Genero: ${genero}`);
 
 });
+
+// Evento Input
+
+let nombreInput = document.querySelector("#nombre")
+nombreInput.addEventListener("input", () => {
+
+    console.log("El usuario ha escrito: " + nombreInput.value)
+
+})
+
+let selectGenero = document.querySelector("#genero");
+selectGenero.addEventListener("change", () => {
+
+    console.log(`Has cambiado el select a '${selectGenero.value}'`);
+    
+})
