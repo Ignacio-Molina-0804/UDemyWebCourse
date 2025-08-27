@@ -72,12 +72,12 @@ superFormulario.addEventListener("submit", (event) => {
 
 // Evento Input
 
-let nombreInput = document.querySelector("#nombre")
+let nombreInput = document.querySelector("#nombre");
 nombreInput.addEventListener("input", () => {
 
-    console.log("El usuario ha escrito: " + nombreInput.value)
+    console.log("El usuario ha escrito: " + nombreInput.value);
 
-})
+});
 
 // Evento Change
 
@@ -86,21 +86,57 @@ selectGenero.addEventListener("change", () => {
 
     console.log(`Has cambiado el select a '${selectGenero.value}'`);
     
-})
+});
 
 // Evento Focus
 
 let campoEmail = document.addEventListener("#email");
 campoEmail.addEventListener("focus", () => {
 
-    console.log("Acabas de entrar al campo de email.")
+    console.log("Acabas de entrar al campo de email.");
 
-})
+});
 
 // Evento Blur
 
 campoEmail.addEventListener("blur", () => {
 
-    console.log("Has salido del campo de email.")
+    console.log("Has salido del campo de email.");
+
+});
+
+/// Eventos del Documento y la Ventana
+
+// Evento DOMContentLoaded
+
+document.addEventListener("DOMContentLoaded", () =>{
+
+    // A partir de aca se pone el codigo para que se lance cuando todo el DOM esta cargado evitando poner el defer en el script.
+
+    console.log("Todo el DOM esta cargado")
+
+});
+
+// Evento Load
+
+window.addEventListener("load", () => {
+
+    console.log("Toda la Web esta cargada, incluido los recursos")
+
+})
+
+// Evento Resize
+
+window.addEventListener("resize", () => {
+
+    console.log("Ventana Redimensionada" + window.innerHeight + " " + window.innerWidth);
+
+})
+
+// Evento Scroll
+
+window.addEventListener("scroll", () => {
+
+    console.log(`Estas en el pixel ${Math.round(window.scrollY)} del scroll de la web.`)
 
 })
