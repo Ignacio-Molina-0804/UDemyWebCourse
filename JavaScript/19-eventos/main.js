@@ -150,3 +150,39 @@ window.addEventListener("scroll", () => {
 })
 
 /// Eventos del PortaPapeles
+
+let PortaPapeles = document.querySelector("#portapapeles");
+
+// Evento Copy
+
+PortaPapeles.addEventListener("copy", () => {
+
+  alert("Haz copiado el texto del input, pero no puedes llevartelo!!")
+  navigator.clipboard.writeText("")
+
+})
+
+// Evento Paste
+
+PortaPapeles.addEventListener("paste", () => {
+
+  alert("Haz pegado un texto en el input!!")
+
+})
+
+// Evento Cut
+
+PortaPapeles.addEventListener("cut", () => {
+
+  alert("Haz cortado el texto del input!!")
+
+})
+
+// Evento ContextMenu
+
+PortaPapeles.addEventListener("contextmenu", (event) => {
+
+  event.preventDefault(); // Esto hace que no te deje ver el menu contextual
+  console.warn("El Usuario a abierto el menu contextual")
+
+})
