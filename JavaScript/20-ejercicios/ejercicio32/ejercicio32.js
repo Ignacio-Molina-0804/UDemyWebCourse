@@ -11,3 +11,11 @@ El usuario podrá añadir tantos productos como quiera.
 Cada producto añadido tiene un botón para borrarlo de la lista.
 
 */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    let nuevoProducto = document.querySelector("#nuevoProducto")
+    let btnAgregar = document.querySelector("#agregar")
+    let listaCompra = document.querySelector("#listaCompra")
+
+})
