@@ -180,3 +180,22 @@ setTimeout(() => {
   botoncito2.removeEventListener("click", alertita2);
   alert("¡Ya no puedes clickear el botoncito 2!")
 }, 10000);
+
+/// Propagacion de Eventos
+
+let cajaPadre = document.querySelector("#cajaPadre")
+let botonHijo = document.querySelector("#botonHijo")
+
+cajaPadre.addEventListener("click", () => {
+
+  alert("Haz tocado el elemento padre")
+
+})
+
+botonHijo.addEventListener("click", (event) => {
+
+  event.stopPropagation();
+
+  alert("Haz tocado el elemento padre")
+
+})
