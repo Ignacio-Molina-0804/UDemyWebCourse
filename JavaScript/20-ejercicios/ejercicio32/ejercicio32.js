@@ -18,4 +18,35 @@ document.addEventListener("DOMContentLoaded", () => {
     let btnAgregar = document.querySelector("#agregar")
     let listaCompra = document.querySelector("#listaCompra")
 
+    btnAgregar.addEventListener("click", () => {
+
+        let productoParaAgregar = nuevoProducto.value.trim();
+
+        if(productoParaAgregar){
+
+            // Creacion de elemento li
+            const productoFinal = document.createElement("li")
+            productoFinal.textContent = productoParaAgregar
+
+            // Crear elemento para eliminar
+            const btnEliminar = document.createElement("button")
+            btnEleminar.textContent = "Borrar"
+            
+            btnEliminar.addEventListener("click", () => {
+
+                productoFinal.remove();
+
+            })
+
+            productoFinal.appendChild(btnEliminar)
+            productoFinal.classList.add("producto")
+
+            // Añade el elemento li al ul
+            listaCompra.appendChild(productoFinal)
+            nuevoProducto.value = ""
+
+        }
+
+    })
+
 })
