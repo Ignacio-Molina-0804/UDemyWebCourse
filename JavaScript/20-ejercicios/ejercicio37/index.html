@@ -1,31 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 37 - JavaScript</title>
 
+    <style>
+
+        #info{
+
+            border: 5px dashed black;
+            padding: 7px;
+            margin: 7px;
+            display: none;
+
+        }
+
+    </style>
+
     <script src="ejercicio37.js" defer></script>
 
 </head>
+
 <body>
-    
+
     <h1>ejercicio37 - JavaScript</h1>
 
     <form action="#" method="post" id="formulario">
 
-        <label for="nombre"> Nombre: </label><br/>
-        <input type="text" name="nombre" id="nombre" placeholder="Ingresa tu nombre..."><br/>
+        <label for="nombre"> Nombre: </label><br />
+        <input type="text" name="nombre" id="nombre" placeholder="Ingresa tu nombre..."><br />
 
-        <label for="apellidos"> Apellidos: </label><br/>
-        <input type="text" name="apellidos" id="apellidos" placeholder="Ingresa tu apellido..."><br/>
+        <label for="apellidos"> Apellidos: </label><br />
+        <input type="text" name="apellidos" id="apellidos" placeholder="Ingresa tu apellido..."><br />
 
-        <label for="edad"> Edad: </label> <br/>
-        <input type="number" name="edad" id="edad" placeholder="Ingresa tu edad..."><br/>
+        <label for="edad"> Edad: </label> <br />
+        <input type="number" name="edad" id="edad" placeholder="Ingresa tu edad..."><br />
 
         <input type="submit" name="Enviar" id="submit">
 
     </form>
 
+    <div class="info">
+
+        <h3>Informacion del usuario:</h3>
+
+        <hr>
+
+        <p id="info_nombre"> Nombre: </p>
+        <p id="info_apellidos"> Apellidos: </p>
+        <p id="info_edad"> Edad: </p>
+
+
+    </div>
+
 </body>
+
 </html>
