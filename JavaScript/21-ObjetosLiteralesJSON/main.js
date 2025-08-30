@@ -9,10 +9,34 @@ let pelicula = {
     genero: "Ciencia Ficcion",
     director: "James Cameron",
     prota: "Arnold Schwarzenegger",
+    
+    // Uso de objeto en un objeto
+    detalles: {
+
+        duracion: 120,
+        pegi: 18
+
+    },
+
+    // Uso de array
+    elenco: ["Arnold", "Linda Hamilton", "Pepe"],
 
     // Uso de metodo
     description: function(){
         return `${this.titulo} es una pelicula de ${this.genero}, dirigida por ${this.director} y lanzada en el año ${this.anio}`; 
+    },
+
+    // Uso de funcion flecha
+    mostrarElenco: () => {
+
+        console.log("Elenco de actores: ")
+
+        pelicula.elenco.forEach(nombre => {
+
+            console.log(nombre)
+
+        })
+
     }
 
 };
@@ -31,6 +55,16 @@ pelicula.secuela = "Terminator 2, mas terminator que nunca"
 console.log(pelicula)
 
 // Uso de funcion
-console.log(description())
+console.log(pelicula.description())
+
+// Uso de la funcion flecha
+pelicula.mostrarElenco();
+
+// Ingreso de elemento del objeto interno
+console.log(pelicula.detalles.duracion)
+
+// Borrar una propiedad del objeto
+delete pelicula.prota
+console.log(pelicula)
 
 /// JSON
