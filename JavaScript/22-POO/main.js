@@ -35,6 +35,12 @@ class Gato {
   set guardarColor(color) {
     this.color = color;
   }
+
+  // Metodo Estatico
+  // Se utiliza para llamarlo sin necesidad de crear un objeto
+  static saludar(){
+    alert("Hola Amigo, que tal estas?")
+  }
 }
 
 // Creacion de objeto con los atributos necesarios
@@ -51,3 +57,6 @@ console.log(miGato.sacarColor)
 // Uso de Metodos
 miGato.maullar();
 miGato.saltar();
+
+// Uso del Metodo Estatico
+Gato.saludar();
