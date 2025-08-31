@@ -60,3 +60,42 @@ miGato.saltar();
 
 // Uso del Metodo Estatico
 Gato.saludar();
+
+// Herencia
+// Hacemos un Extends para que se extiendan todas las propiedades y metodos que tenia la otra clase
+class GatoEspecial extends Gato{
+
+    constructor(nombre, raza, color, habilidad){
+
+        // Super lo colocamos para poner los valores que vienen de la clase padre y asi cargarlos en el otro metodo
+        super(nombre, raza, color)
+        this.habilidad = habilidad
+
+    }
+
+    setHabilidad(habilidad){
+
+        this.habilidad = habilidad
+
+    }
+
+    getHabilidad(){
+
+        return this.habilidad
+
+    }
+
+    usarHabilidad(){
+
+        console.log(`${this.nombre} esta utilizando su habilidad de "${this.habilidad}" para salvar a su dueño!!`)
+
+    }
+
+  }
+
+  // Creacion Objeto
+  let superGato = new GatoEspecial ("Juan", "Mestizo", "Blanco", "Super Excavacion")
+
+  // Uso de metodo propio y metodo heredado
+  superGato.usarHabilidad()
+  superGato.saltar()
