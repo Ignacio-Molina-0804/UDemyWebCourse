@@ -89,3 +89,13 @@ let objetoConvertido = JSON.parse(palaDePadel)
 // Visualizacion entre las diferencias del Objeto y el JSON
 console.log(palaDePadel)
 console.log(palaDePadelJSON)
+
+/// Recorrer un Objeto
+
+let caja = document.querySelector("#datos")
+
+for(let clave in palaDePadel){
+
+    caja.innerHTML += `<p>${clave}: ${palaDePadel[clave]} </p>`
+
+}
