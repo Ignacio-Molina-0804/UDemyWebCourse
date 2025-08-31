@@ -68,3 +68,24 @@ delete pelicula.prota
 console.log(pelicula)
 
 /// JSON
+
+let palaDePadel = {
+
+    nombre: "Metalbone",
+    marca: "Adidas",
+    anio: 2022,
+    peso: 347,
+    forma: "Diamante",
+    dureza: "Media"
+
+}
+
+// Transformacion de Objeto a JSON
+let palaDePadelJSON = JSON.stringify(palaDePadel)
+
+// Transformacion de JSON a Objeto
+let objetoConvertido = JSON.parse(palaDePadel)
+
+// Visualizacion entre las diferencias del Objeto y el JSON
+console.log(palaDePadel)
+console.log(palaDePadelJSON)
