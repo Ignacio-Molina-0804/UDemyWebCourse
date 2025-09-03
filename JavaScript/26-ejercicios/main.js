@@ -16,8 +16,8 @@ y se debe poder eliminar cualquiera de ellas de la lista en cualquier momento.
 Tareas:
 Terminado - Ejercicio 39: Crea el formulario necesario
 Terminado - Ejercicio 40: Función para guardar películas con los datos necesarios
-- Ejercicio 41: Función para mostrar películas extraídas del LocalStorage
-- Ejercicio 42: Haz que las películas carguen automáticamente al abrir la web.
+Terminado - Ejercicio 41: Función para mostrar películas extraídas del LocalStorage
+Terminado - Ejercicio 42: Haz que las películas carguen automáticamente al abrir la web.
 - Ejercicio 43: Función para eliminar películas.
 */
 
@@ -122,12 +122,21 @@ function guardar() {
 
 }
 
-formulario.addEventListener("submit", (e) => {
+window.addEventListener("load", () => {
 
-    e.preventDefault()
+    // Cargar todas las peliculas por defecto
+    mostrar();
 
-    guardar()
+    // Aplicar evento a formulario para guardar 
+    formulario.addEventListener("submit", (e) => {
+
+        e.preventDefault()
+
+        guardar()
+
+    })
 
 })
+
 
 
