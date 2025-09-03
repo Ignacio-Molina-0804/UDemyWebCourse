@@ -18,125 +18,125 @@ Terminado - Ejercicio 39: Crea el formulario necesario
 Terminado - Ejercicio 40: Función para guardar películas con los datos necesarios
 Terminado - Ejercicio 41: Función para mostrar películas extraídas del LocalStorage
 Terminado - Ejercicio 42: Haz que las películas carguen automáticamente al abrir la web.
-- Ejercicio 43: Función para eliminar películas.
+Terminado - Ejercicio 43: Función para eliminar películas.
 */
 
-let formulario = document.querySelector("#formulario")
-let titulo = document.querySelector("#titulo")
-let btn = document.querySelector("#btn")
-let listado = document.querySelector("#listado")
+let formulario = document.querySelector("#formulario");
+let titulo = document.querySelector("#titulo");
+let btn = document.querySelector("#btn");
+let listado = document.querySelector("#listado");
+
+function eliminar(indice) {
+  // Sacar el array de objetos del localStorage
+  let pelisGuardadas = JSON.parse(localStorage.getItem("peliculas"));
+
+  // Eliminar Pelicula del indice
+  pelisGuardadas.splice(indice, 1);
+
+  // Actualizar array del LocalStorage
+  localStorage.setItem("peliculas", JSON.stringify(pelisGuardadas));
+
+  // Mostrar Listado
+  mostrar();
+}
 
 function mostrar() {
+  // Seleccionar la etiqueta del listado
+  listado.innerHTML = "";
 
-    // Seleccionar la etiqueta del listado
-    listado.innerHTML = ""
+  // Sacar peliculas del localStorage
+  let pelisGuardadas = JSON.parse(localStorage.getItem("peliculas"));
 
-    // Sacar peliculas del localStorage
-    let pelisGuardadas = JSON.parse(localStorage.getItem("peliculas"))
+  // Si no hay peliculas mostrar un mensaje
+  if (pelisGuardadas.length === 0) {
+    listado.innerText = "No hay peliculas para mostrar.";
 
-    // Si no hay peliculas mostrar un mensaje
-    if(pelisGuardadas.length === 0){
+    return false;
+  }
 
-        listado.innerText = "No hay peliculas para mostrar."
+  // Recorrer pelis y mostrar
+  pelisGuardadas.forEach((pelicula, indice) => {
+    const peliArticle = document.createElement("article");
 
-        return false
-
-    }
-
-    // Recorrer pelis y mostrar
-    pelisGuardadas.forEach((pelicula, indice) => {
-
-        const peliArticle = document.createElement("article")
-
-        peliArticle.innerHTML = `
+    peliArticle.innerHTML = `
             <h3>${pelicula.titulo}</h3>
             <p>Fecha: ${pelicula.fecha}</p>
             <p>Popularidad: ${pelicula.popularidad}</p>
-            <p>
-                <button id="eliminar${indice}" data-id="${indice}>Eliminar</button>
-            </p>
-            <hr>
-        `
-        
-        listado.appendChild(peliArticle)
-    });
+        `;
+    // Crear boton y bindearle evento
+    const eliminarBtn = document.createElement("button");
+    eliminarBtn.textContent = "Eliminar";
+    eliminarBtn.addEventListener("click", () => eliminar(indice));
 
-    // Opcional para que la funcion devuelva algo para buena practica
-    return true;
+    peliArticle.appendChild(eliminarBtn);
+    peliArticle.appendChild(document.createElement("hr"));
+
+    listado.appendChild(peliArticle);
+  });
+
+  // Opcional para que la funcion devuelva algo para buena practica
+  return true;
 }
 
 function guardar() {
+  console.log("Formulario Guardado");
 
-    console.log("Formulario Guardado")
+  // Seleccionar la caja de texto y sacar su valor
+  titulo = titulo.value;
 
-    // Seleccionar la caja de texto y sacar su valor
+  // Validacion
+  if (titulo.trim() === "") {
+    alert("Por favor, mete el titulo de la pelicula!!");
 
-    titulo = titulo.value
+    return false;
+  }
 
-    // Validacion
-    if (titulo.trim() === ""){
-        alert("Por favor, mete el titulo de la pelicula!!")
+  // Conseguir fecha actual
+  const fecha = new Date();
+  const fechaActual =
+    fecha.toLocaleTimeString() + " " + fecha.toLocaleTimeString();
 
-        return false
-    }
+  // Generar un numero aleatorio para popularidad
+  let popularidad = Math.floor(Math.random() * 100) + 1;
 
-    // Conseguir fecha actual
-    const fecha = new Date()
-    const fechaActual = fecha.toLocaleTimeString() + " " + fecha.toLocaleTimeString()
+  // Crear objeto pelicula
+  let pelicula = {
+    titulo,
+    fecha: fechaActual,
+    popularidad,
+  };
 
-    // Generar un numero aleatorio para popularidad
-    let popularidad = Math.floor(Math.random() * 100) + 1;
+  // Sacar todas las peliculas (array de objetos)
+  let pelisGuardadas = JSON.parse(localStorage.getItem("peliculas"));
 
-    // Crear objeto pelicula
-    let pelicula = {
+  if (!pelisGuardadas) {
+    pelisGuardadas = [];
+  }
 
-        titulo,
-        fecha: fechaActual,
-        popularidad
+  // Añadir al array la nueva pelicula
+  pelisGuardadas.push(pelicula);
 
-    }
+  // Guardar todo en el localStorage
+  localStorage.setItem("peliculas", JSON.stringify(pelisGuardadas));
 
-    // Sacar todas las peliculas (array de objetos)
-    let pelisGuardadas = JSON.parse(localStorage.getItem("peliculas"))
+  // Limpiar el campo de texto
+  titulo.value = "";
 
-    if(!pelisGuardadas){
+  // Mostrar las peliculas
+  mostrar();
 
-        pelisGuardadas = []
-
-    }
-
-    // Añadir al array la nueva pelicula
-    pelisGuardadas.push(pelicula)
-
-    // Guardar todo en el localStorage
-    localStorage.setItem("peliculas", JSON.stringify(pelisGuardadas))
-
-    // Limpiar el campo de texto
-    titulo.value = ""
-
-    // Mostrar las peliculas
-    mostrar()
-
-    // Para que la funcion devuelva algo
-    return true;
-
+  // Para que la funcion devuelva algo
+  return true;
 }
 
 window.addEventListener("load", () => {
+  // Cargar todas las peliculas por defecto
+  mostrar();
 
-    // Cargar todas las peliculas por defecto
-    mostrar();
+  // Aplicar evento a formulario para guardar
+  formulario.addEventListener("submit", (e) => {
+    e.preventDefault();
 
-    // Aplicar evento a formulario para guardar 
-    formulario.addEventListener("submit", (e) => {
-
-        e.preventDefault()
-
-        guardar()
-
-    })
-
-})
-
-
-
+    guardar();
+  });
+});
