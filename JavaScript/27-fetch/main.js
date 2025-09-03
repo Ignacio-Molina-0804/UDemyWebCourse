@@ -50,3 +50,26 @@ fetch("https://reqres.in/api/users", {
 .catch(error => {
     console.log(error)
 })
+
+/// Sintaxis de promesas con async y await
+
+// Get con async y await
+
+async function sacarUsuarios(){
+
+    try{
+        let response = await fetch("https://reqres.in/api/users?page=2")
+        let data = await response.json()
+
+        console.log(data.data)
+
+        data.data.forEach(user => {
+        console.log(user)  
+        });
+    }catch(error){
+        console.log("Error al conseguir la informacion: ", error);
+    }
+
+}
+
+sacarUsuarios()
