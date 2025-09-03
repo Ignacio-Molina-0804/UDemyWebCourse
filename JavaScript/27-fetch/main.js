@@ -26,3 +26,27 @@ function mostrarUsuario(user){
     `
 
 }
+
+// Guardar Informacion (POST)
+
+const usuarioParaGuardar = {
+
+    name: "Pepe Argento",
+    job: "Zapatero"
+
+}
+
+fetch("https://reqres.in/api/users", {
+    method: "POST",
+    headers: {
+        "Content-Type":"application/json"
+    },
+    body:JSON.stringify(usuarioParaGuardar)
+})
+.then(response => response.json())
+.then(data => {
+    console.log(data)
+})
+.catch(error => {
+    console.log(error)
+})
