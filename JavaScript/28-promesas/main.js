@@ -71,5 +71,29 @@ servirPizza()
     console.log(resultado3);
   })
   .catch((error) => {
-    console.log("Error en las comandas: " + error);
+    console.log("Error en las comandas: ", error);
   });
+
+/* Async y Await */
+
+async function servirPlatos() {
+  try {
+    let resultado1 = await servirPizza();
+
+    if (resultado1 != "pizzeta") {
+      throw new Error("La pizzeta no es lo que queria el cliente!");
+    } else {
+      console.warn(resultado1);
+    }
+
+    let resultado2 = await servirHamburguesa();
+    console.warn(resultado2);
+
+    let resultado3 = await servirSolomilloSalsaAceituna();
+    console.warn(resultado3);
+  } catch (error) {
+    console.log("Error en las comandas: ", error);
+  }
+}
+
+servirPlatos();
