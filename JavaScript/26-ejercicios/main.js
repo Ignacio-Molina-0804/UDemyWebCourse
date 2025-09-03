@@ -15,7 +15,7 @@ y se debe poder eliminar cualquiera de ellas de la lista en cualquier momento.
 
 Tareas:
 Terminado - Ejercicio 39: Crea el formulario necesario
-- Ejercicio 40: Función para guardar películas con los datos necesarios
+Terminado - Ejercicio 40: Función para guardar películas con los datos necesarios
 - Ejercicio 41: Función para mostrar películas extraídas del LocalStorage
 - Ejercicio 42: Haz que las películas carguen automáticamente al abrir la web.
 - Ejercicio 43: Función para eliminar películas.
@@ -24,11 +24,45 @@ Terminado - Ejercicio 39: Crea el formulario necesario
 let formulario = document.querySelector("#formulario")
 let titulo = document.querySelector("#titulo")
 let btn = document.querySelector("#btn")
+let listado = document.querySelector("#listado")
 
 function mostrar() {
 
+    // Seleccionar la etiqueta del listado
+    listado.innerHTML = ""
 
+    // Sacar peliculas del localStorage
+    let pelisGuardadas = JSON.parse(localStorage.getItem("peliculas"))
 
+    // Si no hay peliculas mostrar un mensaje
+    if(pelisGuardadas.length === 0){
+
+        listado.innerText = "No hay peliculas para mostrar."
+
+        return false
+
+    }
+
+    // Recorrer pelis y mostrar
+    pelisGuardadas.forEach((pelicula, indice) => {
+
+        const peliArticle = document.createElement("article")
+
+        peliArticle.innerHTML = `
+            <h3>${pelicula.titulo}</h3>
+            <p>Fecha: ${pelicula.fecha}</p>
+            <p>Popularidad: ${pelicula.popularidad}</p>
+            <p>
+                <button id="eliminar${indice}" data-id="${indice}>Eliminar</button>
+            </p>
+            <hr>
+        `
+        
+        listado.appendChild(peliArticle)
+    });
+
+    // Opcional para que la funcion devuelva algo para buena practica
+    return true;
 }
 
 function guardar() {
