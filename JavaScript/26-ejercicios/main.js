@@ -25,6 +25,12 @@ let formulario = document.querySelector("#formulario")
 let titulo = document.querySelector("#titulo")
 let btn = document.querySelector("#btn")
 
+function mostrar() {
+
+
+
+}
+
 function guardar() {
 
     console.log("Formulario Guardado")
@@ -57,14 +63,28 @@ function guardar() {
     }
 
     // Sacar todas las peliculas (array de objetos)
+    let pelisGuardadas = JSON.parse(localStorage.getItem("peliculas"))
+
+    if(!pelisGuardadas){
+
+        pelisGuardadas = []
+
+    }
 
     // Añadir al array la nueva pelicula
+    pelisGuardadas.push(pelicula)
 
     // Guardar todo en el localStorage
+    localStorage.setItem("peliculas", JSON.stringify(pelisGuardadas))
 
     // Limpiar el campo de texto
+    titulo.value = ""
 
     // Mostrar las peliculas
+    mostrar()
+
+    // Para que la funcion devuelva algo
+    return true;
 
 }
 
