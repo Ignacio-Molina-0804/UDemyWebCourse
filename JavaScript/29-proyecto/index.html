@@ -77,7 +77,7 @@
                 </p>
                 <button class="article__btn">Leer Más</button>
             </article>
-            
+
             <article class="articles__article">
                 <h3 class="article__title">Articulo de Prueba 2</h3>
                 <span class="article__date">30/12/2028</span>
@@ -110,7 +110,7 @@
                 </p>
                 <button class="article__btn">Leer Más</button>
             </article>
-            
+
             <article class="articles__article">
                 <h3 class="article__title">Articulo de Prueba 5</h3>
                 <span class="article__date">30/12/2028</span>
@@ -135,7 +135,54 @@
 
         </main>
 
-        <aside class="layout__aside"></aside>
+        <aside class="layout__aside">
+
+            <header class="aside__header">
+                <div class="header__container-title">
+                    <h3 class="header__title">
+                        <span class="title_span">¿Quien soy?</span>
+                    </h3>
+                </div>
+
+                <div class="header__container-img">
+                    <img class="header__img" src="./assets/img/caracol.jpg" alt="caracol" />
+                </div>
+
+                <p class="header__description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio fugiat dicta ut unde ratione
+                    doloremque ipsa quia natus ipsum. Maiores laudantium qui vel amet voluptates sequi iste eligendi,
+                    labore omnis.
+                </p>
+
+            </header>
+
+            <form class="aside__login">
+                <div class="login__container-title">
+                    <h3 class="login__title">
+                        <span class="title_span">Identificate</span>
+                    </h3>
+                </div>
+
+                <div class="login__form-group">
+                    <label class="login__label" for="name">Nombre:</label>
+                    <input type="text" name="name" id="name" class="login__input" required />
+                </div>
+
+                <div class="login__form-group">
+                    <label class="login__label" for="email">Email:</label>
+                    <input type="email" name="email" id="email" class="login__input" required />
+                </div>
+
+                <div class="login__form-group">
+                    <label class="login__label" for="pass">Contraseña:</label>
+                    <input type="password" name="pass" id="pass" class="login__input" required />
+                </div>
+
+                <input type="button" value="Entrar" class="login__submit">
+
+            </form>
+
+        </aside>
 
     </div>
 
