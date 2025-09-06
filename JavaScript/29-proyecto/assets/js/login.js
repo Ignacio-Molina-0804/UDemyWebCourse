@@ -1,0 +1,7 @@
+let loginForm = document.querySelector(".aside__login")
+let inputName = document.querySelector("#name")
+let inputEmail = document.querySelector("#email")
+let inputPassword = document.querySelector("#password")
+let asideData = document.querySelector(".aside__data")
+let loginName = document.querySelector(".data__name")
+let btnLogout = document.querySelector(".data__logout")
