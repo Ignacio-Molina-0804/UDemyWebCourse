@@ -323,3 +323,9 @@ body {
   display: none;
 
 } 
+
+.aside__login--hide{
+
+  display: none;
+
+}
