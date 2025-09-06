@@ -1,7 +1,7 @@
 let loginForm = document.querySelector(".aside__login")
 let inputName = document.querySelector("#name")
 let inputEmail = document.querySelector("#email")
-let inputPassword = document.querySelector("#password")
+let inputPassword = document.querySelector("#pass")
 let asideData = document.querySelector(".aside__data")
 let loginName = document.querySelector(".data__name")
 let btnLogout = document.querySelector(".data__logout")
@@ -13,7 +13,7 @@ loginForm.addEventListener("submit", (e) => {
     // Recoger los valores de formulario
     let name = inputName.value;
     let email = inputEmail.value;
-    let password = password.value;
+    let password = inputPassword.value;
 
     // Comprobar que todo esta relleno
     let user = {}
@@ -29,6 +29,7 @@ loginForm.addEventListener("submit", (e) => {
         loginForm.reset();
         
         // Mostrar el usuario
+        getUser();
     }
 
 })
