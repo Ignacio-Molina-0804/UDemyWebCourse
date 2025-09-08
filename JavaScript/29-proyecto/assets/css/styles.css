@@ -373,20 +373,20 @@ body {
 
 }
 
-.collapse__header > .fa__solid{
+.collapse__header > .fa-solid{
 
   font-size: 1.5rem;
   position: absolute;
 
 }
 
-.collapse__header > .fa__chevron-down{
+.collapse__header > .fa-chevron-down{
 
   opacity: 1;
 
 }
 
-.collapse__header > .fa__chevron-up{
+.collapse__header > .fa-chevron-up{
 
   opacity: 0;
 
@@ -412,8 +412,16 @@ body {
 
 }
 
-.collapse_text{
+.collapse__text{
 
   padding: 2rem;
+
+}
+
+.accordion__collapse--open .collapse__body{
+
+  max-height: 999px;
+  border-bottom: 1px solid var(--color-shadow);
+  transition: all 1s ease-in-out;
 
 }
