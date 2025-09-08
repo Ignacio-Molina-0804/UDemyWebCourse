@@ -2,3 +2,7 @@
 // O tocando las opciones del tsconfig.json del rootDir y outDir Creando las carpetas dist y src
 
 let nombre:string = "Ignacio Molina"
+
+alert("Hola que tal desde TS");
+
+document.querySelector("#mensaje").innerHTML = "Aprende TypeScript"
