@@ -8,10 +8,18 @@ console.log(typeof nombreCompleto);
 
 // String
 
+let pais: string = "Argentina";
+
 // Number
+
+let habitantes: number = 40000000;
 
 // Boolean
 
+let verdadero: boolean = true;
+
 // Any
+
+let locura: any = "Curso " + 12; // Puedes poner cualquier dato como en JavaScript
 
 // Arrays

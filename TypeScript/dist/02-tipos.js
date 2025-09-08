@@ -6,7 +6,11 @@ let nombreCompleto = "Ignacio Molina";
 console.log(nombreCompleto);
 console.log(typeof nombreCompleto);
 // String
+let pais = "Argentina";
 // Number
+let habitantes = 40000000;
 // Boolean
+let verdadero = true;
 // Any
+let locura = "Curso " + 12; // Puedes poner cualquier dato como en JavaScript
 // Arrays
