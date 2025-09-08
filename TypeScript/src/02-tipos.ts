@@ -6,6 +6,9 @@ let nombreCompleto = "Ignacio Molina";
 console.log(nombreCompleto);
 console.log(typeof nombreCompleto);
 
+const nombreCompleto2 = "Lionel Messi";
+//nombreCompleto2 = "Pepe" // No deja porque es una constante
+
 // String
 
 let pais: string = "Argentina";
@@ -23,3 +26,11 @@ let verdadero: boolean = true;
 let locura: any = "Curso " + 12; // Puedes poner cualquier dato como en JavaScript
 
 // Arrays
+
+let lenguajes: string[] = ["JS", "TS", "PHP", "PYTHON"];
+let decadas: Array<number> = [90, 80, 70];
+
+// Tipos Especiales
+
+let sinDefinir: undefined = undefined;
+let nula: null = null;
