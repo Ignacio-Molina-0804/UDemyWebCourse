@@ -514,3 +514,13 @@ body {
   color: white;
 
 }
+
+.just-validate-error-label{
+
+  color: white !important;
+  background-color: red;
+  padding: 1rem;
+  border-radius: 5px;
+  margin-top: 0.5rem;
+
+}
