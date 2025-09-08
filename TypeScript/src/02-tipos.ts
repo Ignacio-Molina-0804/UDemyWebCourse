@@ -34,3 +34,14 @@ let decadas: Array<number> = [90, 80, 70];
 
 let sinDefinir: undefined = undefined;
 let nula: null = null;
+
+// Tipos de Datos Multiples
+
+let arrayNumerosYPalabras: Array<string|number> = [90, "Hola", 70, "Como"]
+
+// Tipos Personalizados
+
+type alfanumerico = string | number
+
+let nombreYEdad: alfanumerico = 19
+nombreYEdad = "Pepe"

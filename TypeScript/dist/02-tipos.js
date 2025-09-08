@@ -21,3 +21,7 @@ let decadas = [90, 80, 70];
 // Tipos Especiales
 let sinDefinir = undefined;
 let nula = null;
+// Tipos de Datos Multiples
+let arrayNumerosYPalabras = [90, "Hola", 70, "Como"];
+let nombreYEdad = 19;
+nombreYEdad = "Pepe";
