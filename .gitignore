@@ -3,7 +3,6 @@
 node_modules/
 
 # Archivos de build
-dist/
 build/
 
 # Archivos de logs
