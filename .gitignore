@@ -1,6 +1,7 @@
 # Dependencias
 # Instala las dependencias de TypeScript con "npm i typescript --save-dev"
 node_modules/
+fonts/
 
 # Archivos de build
 build/
