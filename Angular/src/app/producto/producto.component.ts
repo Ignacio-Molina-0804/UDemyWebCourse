@@ -5,7 +5,7 @@ import { Ventas } from '../ventas/ventas';
 
 @Component({
   selector: 'miProducto',
-  imports: [Usuario, Pelicula, Ventas],
+  imports: [Pelicula],
   templateUrl: 'producto.component.html',
   styleUrl: 'producto.component.css',
 })
@@ -14,6 +14,8 @@ export class ProductoComponent {
   public marca: string;
   public descripcion: string;
   public precio: number;
+
+  public mostrarPeliculas: boolean = true;
 
   constructor() {
     this.nombreDelProducto = 'Pc Portatil';
@@ -37,5 +39,15 @@ export class ProductoComponent {
 
   ngDoCheck() {
     console.log('Componente Actualizado');
+  }
+
+  // Hook que se ejecuta una vez toda la vista este completa
+  ngAfterViewInit() {
+    console.log('La vista esta cargada!');
+  }
+
+  // Metodo para usar el hook que se ejecuta la eliminar el componente
+  OcultarPeliculas(valor:boolean) {
+    this.mostrarPeliculas = valor;
   }
 }

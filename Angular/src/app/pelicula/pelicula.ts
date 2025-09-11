@@ -10,4 +10,19 @@ import { Component } from '@angular/core';
 })
 export class Pelicula {
 
+  // Hook que se ejecuta la eliminar el componente
+
+  ngOnInit(){
+
+    console.log("El componente de Pelicula esta arrancado!!")
+
+  }
+
+  ngOnDestroy(){
+
+    console.log("El componente de Pelicula ha sido borrado")
+
+  }
+
+
 }
