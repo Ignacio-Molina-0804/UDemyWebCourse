@@ -26,10 +26,16 @@ export class ProductoComponent {
   }
 
   // Hook que se ejecuta una vez se inicializo todo el contenido del componente
-  ngOnInit(){
-
-    console.log("El Componente esta inicializado")
-
+  ngOnInit() {
+    console.log('El Componente esta inicializado');
   }
 
+  // Hook que se ejecuta en el momento que el componente se actualiza
+  cambiarNombre() {
+    this.nombreDelProducto = 'Laptop Asus 177h';
+  }
+
+  ngDoCheck() {
+    console.log('Componente Actualizado');
+  }
 }
