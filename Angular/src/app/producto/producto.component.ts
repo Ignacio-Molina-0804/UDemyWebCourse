@@ -24,4 +24,12 @@ export class ProductoComponent {
     console.log('Se ha cargado el componente de productos!');
     alert('Holaa');
   }
+
+  // Hook que se ejecuta una vez se inicializo todo el contenido del componente
+  ngOnInit(){
+
+    console.log("El Componente esta inicializado")
+
+  }
+
 }
