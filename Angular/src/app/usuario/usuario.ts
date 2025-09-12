@@ -2,10 +2,11 @@
 
 import { Component } from '@angular/core';
 import { Ventas } from '../ventas/ventas';
+import { ProductoComponent } from '../producto/producto.component';
 
 @Component({
   selector: 'app-usuario',
-  imports: [Ventas],
+  imports: [Ventas, ProductoComponent],
   templateUrl: './usuario.html',
   styleUrl: './usuario.css',
 })

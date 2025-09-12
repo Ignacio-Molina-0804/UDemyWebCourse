@@ -61,5 +61,28 @@
         <p>Eres un usuario invitadp</p>
 
     }
+}
 
+<h3>Mas cosas de las plantillas</h3>
+
+<!-- Container de Angular -->
+
+<ng-container>
+
+    <h4>Esto esta hecho en un contenedor de Angular</h4>
+
+</ng-container>
+
+<!-- Creacion de Variables en la plantilla de HTML -->
+
+@let pais = "Argentina";
+@let saludo = "Saludos desde " + pais;
+{{saludo}}
+
+<!-- Carga diferida en la plantilla de HTML -->
+
+@defer{
+    <miProducto></miProducto>
+} @placeholder {
+    <p>Se esta cargando el componente de producto!</p>
 }
