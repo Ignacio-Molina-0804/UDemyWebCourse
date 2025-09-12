@@ -37,6 +37,8 @@ export class Usuario {
 
   };
 
+  fecha = new Date(2030, 12, 25)
+
   cambioRedireccion() {
     if (this.redirigir == false) {
       this.redirigir = true;
