@@ -3,10 +3,11 @@
 import { Component } from '@angular/core';
 import { Ventas } from '../ventas/ventas';
 import { ProductoComponent } from '../producto/producto.component';
+import { UpperCasePipe, LowerCasePipe, DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-usuario',
-  imports: [Ventas, ProductoComponent],
+  imports: [Ventas, ProductoComponent, LowerCasePipe, UpperCasePipe, DatePipe],
   templateUrl: './usuario.html',
   styleUrl: './usuario.css',
 })
