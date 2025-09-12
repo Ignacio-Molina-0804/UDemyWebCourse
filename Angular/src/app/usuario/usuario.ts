@@ -6,12 +6,17 @@ import { Component } from '@angular/core';
   selector: 'app-usuario',
   imports: [],
   templateUrl: './usuario.html',
-  styleUrl: './usuario.css'
+  styleUrl: './usuario.css',
 })
 export class Usuario {
+  web = 'https://google.com';
+  redirigir = false;
 
-  web = "https://google.com"
-  redirigir = false
-
+  cambioRedireccion() {
+    if (this.redirigir == false) {
+      this.redirigir = true;
+    } else {
+      this.redirigir = false;
+    }
+  }
 }
- 

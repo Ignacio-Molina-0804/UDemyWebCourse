@@ -3,3 +3,17 @@
 <p>{{web}}</p>
  
 <a [href]="web" [class.existe]="redirigir" target="_blank"> Ir a mi Web</a>
+
+<h2>Estructuras de control de flujo</h2>
+
+@if (redirigir) {
+
+    <p>El enlace a {{web}} es correcto</p>
+ 
+} @else {
+
+    <p>El enlace no va a funcionar</p>
+
+}
+
+<button (click)="cambioRedireccion()">Modificar Enlace</button>
