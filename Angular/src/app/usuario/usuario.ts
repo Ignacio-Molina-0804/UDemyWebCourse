@@ -10,5 +10,8 @@ import { Component } from '@angular/core';
 })
 export class Usuario {
 
+  web = "https://google.com"
+  redirigir = false
+
 }
  
