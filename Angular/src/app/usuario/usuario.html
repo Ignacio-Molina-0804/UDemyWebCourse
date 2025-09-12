@@ -33,3 +33,33 @@
         <li>El listado esta completamente vacio !</li>
     }
 </ul>
+
+<!-- @if (usuario.rol == "admin") {
+    <app-ventas></app-ventas>
+} -->
+
+@switch (usuario.rol) {
+
+    @case ("admin"){
+
+        <h2>Rol: {{usuario.rol}}</h2>
+        <p>Eres un admin</p>
+        <app-ventas></app-ventas>
+
+    }
+
+    @case ("user") {
+
+        <h2>Rol: {{usuario.rol}}</h2>
+        <p>Eres un usuario normal</p>
+
+    }
+
+    @default{
+
+        <h2>Rol: Invitado</h2>
+        <p>Eres un usuario invitadp</p>
+
+    }
+
+}
