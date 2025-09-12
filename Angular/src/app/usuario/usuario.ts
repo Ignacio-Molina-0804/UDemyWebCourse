@@ -12,6 +12,19 @@ export class Usuario {
   web = 'https://google.com';
   redirigir = false;
 
+  marcasPaddel = [
+    "Siux", "Kombat", "Bullpadel", "Head", "Adidas", "Starvite"
+  ];
+
+  marcasPaddelObjeto = [
+    {id:1, nombre:"Siux"},
+    {id:2, nombre:"Kombat"},
+    {id:3, nombre:"Bullpadel"},
+    {id:4, nombre:"Head"},
+    {id:5, nombre:"Adidas"},
+    {id:6, nombre:"Starvite"}
+  ]
+
   cambioRedireccion() {
     if (this.redirigir == false) {
       this.redirigir = true;
