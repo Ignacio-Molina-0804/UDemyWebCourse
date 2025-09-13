@@ -1,0 +1,18 @@
+.resaltar{
+
+    background-color: yellow;
+    padding: 10px;
+    height: auto;
+    width: 270px;
+    font-weight: bold;
+    font-style: italic;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+.destacarMenos{
+
+    opacity: 50%;
+    
+
+}
