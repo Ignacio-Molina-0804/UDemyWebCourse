@@ -6,3 +6,6 @@
 <!-- NgClass sirve para colocar una clase de estilo en base a que una variable tenga su bandera dando un estilo en true y otro en false -->
 <h2 [ngClass]="colorear ? 'resaltar' : 'destacarMenos'">Soy Ignacio Molina</h2>
 
+<!-- NgStyle sirve para aplicar un estilo en linea -->
+<h2 [ngStyle]="colorear ? {'background-color':'yellow'} : {'background-color':'gray'}"> Hola Soy Ignacio Molina </h2>
+<p [ngStyle]="misEstilos">NgStyle con Variable</p>
