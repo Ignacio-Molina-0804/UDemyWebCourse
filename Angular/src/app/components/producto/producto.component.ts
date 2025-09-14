@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Usuario } from '../usuario/usuario';
-import { Pelicula } from '../pelicula/pelicula';
 import { Ventas } from '../ventas/ventas';
+import { Pelicula } from '../pelicula/pelicula';
 
 @Component({
   selector: 'miProducto',

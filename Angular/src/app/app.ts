@@ -1,7 +1,7 @@
 import { Component, signal } from '@angular/core';
-import { Usuario } from './usuario/usuario';
-import { Pelicula } from "./pelicula/pelicula";
-import { Ventas } from './ventas/ventas';
+import { Usuario } from './components/usuario/usuario';
+import { Ventas } from './components/ventas/ventas';
+import { Pelicula } from './components/pelicula/pelicula';
 
 @Component({
   selector: 'app-root',
