@@ -6,14 +6,24 @@
 
     @for (pelicula of peliculas; track pelicula.id) {
 
-        <li>{{pelicula.titulo}} - {{pelicula.genero}} - {{pelicula.plataforma}}</li>
-        
+    <li>{{pelicula.titulo}} - {{pelicula.genero}} - {{pelicula.plataforma}}</li>
+
     }
 
 </ul>
 
 <h1>Formulario y Two Way Data Binding en Angular</h1>
 
-<input type="text" [(ngModel)] = "mi_pelicula"/>
+<input type="text" [(ngModel)]="mi_pelicula" />
+<button (click)="showPelicula()">Mostrar Pelicula</button>
+<button (click)="addPelicula()">Añadir Pelicula</button>
 
 <p>Mi pelicula es: <strong>{{mi_pelicula}}</strong></p>
+
+<h3>Listado de Peliculas simples:</h3>
+
+<ul>
+    @for (pelicula of pelisSinDatos; track pelicula) {
+        <li>{{pelicula}}</li>
+    }
+</ul>

@@ -13,6 +13,7 @@ export class Cine {
   public peliculas: Array<Pelicula>;
 
   public mi_pelicula: string = "";
+  public pelisSinDatos: string[] = [];
 
   constructor() {
     this.titulo = 'Modelos';
@@ -42,6 +43,18 @@ export class Cine {
   ngDoCheck(){
 
     console.log(this.mi_pelicula)
+
+  }
+
+  showPelicula(){
+
+    alert(this.mi_pelicula)
+
+  }
+
+  addPelicula(){
+
+    this.pelisSinDatos.push(this.mi_pelicula)
 
   }
 }
