@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { Pelicula } from '../../models/pelicula';
 import { FormsModule } from '@angular/forms';
+import { NgStyle } from '@angular/common';
 
 @Component({
   selector: 'app-cine',
-  imports: [FormsModule],
+  imports: [FormsModule, NgStyle],
   templateUrl: './cine.html',
   styleUrl: './cine.css',
 })
@@ -14,6 +15,8 @@ export class Cine {
 
   public mi_pelicula: string = '';
   public pelisSinDatos: string[] = [];
+
+  public color: string = "#FFFFFF"
 
   constructor() {
     this.titulo = 'Modelos';

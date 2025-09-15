@@ -2,11 +2,17 @@
 
 <h1>{{titulo}}</h1>
 
+<p>Elige el color <input type="color" [(ngModel)] = "color"></p>
+
 <ul>
 
     @for (pelicula of peliculas; track pelicula.id) {
 
-    <li>{{pelicula.titulo}} - {{pelicula.genero}} - {{pelicula.plataforma}}</li>
+    <li>{{pelicula.titulo}} 
+        - 
+        <span [ngStyle]="{'background-color': color}"> {{pelicula.genero}}</span>
+        - 
+        {{pelicula.plataforma}}</li>
 
     }
 
