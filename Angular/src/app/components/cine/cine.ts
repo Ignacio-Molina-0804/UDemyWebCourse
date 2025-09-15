@@ -73,4 +73,22 @@ export class Cine {
   borrarPeli(indice:number) {
     this.peliculas.splice(indice, 1)
   }
+
+  haciendoFoco(){
+
+    console.warn("Estas Haciendo Foco")
+
+  }
+
+  saliendoDelFoco(){
+
+    console.warn("Dejaste de Hacer Foco")
+
+  }
+
+  pulsandoTeclas(evento: KeyboardEvent){
+
+    console.info("Estas pulsando la tecla: "+ evento.key +"!!")
+
+  }
 }
