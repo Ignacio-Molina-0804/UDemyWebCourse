@@ -1,15 +1,18 @@
 import { Component } from '@angular/core';
 import { Pelicula } from '../../models/pelicula';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-cine',
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './cine.html',
   styleUrl: './cine.css',
 })
 export class Cine {
   public titulo: string;
   public peliculas: Array<Pelicula>;
+
+  public mi_pelicula: string = "";
 
   constructor() {
     this.titulo = 'Modelos';
@@ -33,6 +36,12 @@ export class Cine {
     console.log(this.peliculas)
 
     this.peliculas[1].titulo = "ET, El marciano"
+
+  }
+
+  ngDoCheck(){
+
+    console.log(this.mi_pelicula)
 
   }
 }
