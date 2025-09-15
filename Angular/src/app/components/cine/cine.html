@@ -12,11 +12,13 @@
 
 </ul>
 
+<hr>
 <h1>Formulario y Two Way Data Binding en Angular</h1>
 
 <input type="text" [(ngModel)]="mi_pelicula" />
 <button (click)="showPelicula()">Mostrar Pelicula</button>
 <button (click)="addPelicula()">Añadir Pelicula</button>
+<button (click)="addPeliculaPrincipal()">Añadir Pelicula Principal</button>
 
 <p>Mi pelicula es: <strong>{{mi_pelicula}}</strong></p>
 
