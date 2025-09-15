@@ -6,14 +6,17 @@
 
 <ul>
 
-    @for (pelicula of peliculas; track pelicula.id) {
+    @for (pelicula of peliculas; track pelicula.id; let indice = $index) {
 
-    <li>{{pelicula.titulo}} 
+    <li>
+        {{pelicula.titulo}} 
         - 
         <span [ngStyle]="{'background-color': color}"> {{pelicula.genero}}</span>
         - 
-        {{pelicula.plataforma}}</li>
-
+        {{pelicula.plataforma}}
+    
+        <button (click)="borrarPeli(indice)">Borrar</button>
+    </li>
     }
 
 </ul>
