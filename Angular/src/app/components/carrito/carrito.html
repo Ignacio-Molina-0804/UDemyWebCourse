@@ -6,14 +6,14 @@
 
 
     <h3>{{nombreTienda}}</h3>
-    <p>Productos en el carrito: CANTIDAD DE PRODUCTOS</p>
-    <p>Total del carrito: TOTAL DEL CARRITO</p>
+    <p>Productos en el carrito: {{cantidadProductos}}</p>
+    <p>Total del carrito: {{totalCarrito}} $</p>
 
     <button (click)="addProducto()">Añadir Producto</button>
-    <button>Añadir 5 Producto</button>
+    <button (click)="addCincoProducto()">Añadir 5 Producto</button>
     <button>Aplicar cupon de 20%</button>
-    <button>Eliminar un producto</button>
-    <button>Vaciar Carrito</button>
+    <button (click)="deleteProducto()">Eliminar un producto</button>
+    <button (click)="vaciarCarrito()">Vaciar Carrito</button>
 
 </div>
 
