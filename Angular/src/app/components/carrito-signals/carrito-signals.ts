@@ -25,6 +25,12 @@ export class CarritoSignals {
 
     })
 
+    effect(() => {
+
+      console.log("El nombre de la tienda ahora ha cambiado: ", this.nombreTienda())
+
+    })
+
   }
 
 
@@ -48,34 +54,34 @@ export class CarritoSignals {
   }
 
   addCincoProducto() {
-    this.cantidadProductos += 5;
-    this.totalCarrito += this.precioBase * 5;
+    this.cantidadProductos.update(cantidad => cantidad + 5);
+    this.totalCarrito.update(total => total + (this.precioBase * 5));
 
-    console.log(`Cinco nuevos producto añadidos, Precio total actual ${this.totalCarrito}`);
+    console.log(`Cinco nuevos producto añadidos, Precio total actual ${this.totalCarrito()}`);
   }
 
   deleteProducto() {
-    if (this.cantidadProductos >= 1) {
-      this.cantidadProductos -= 1;
-      this.totalCarrito -= this.precioBase;
+    if (this.cantidadProductos() >= 1) {
+      this.cantidadProductos.update(cantidad => cantidad - 1);
+      this.totalCarrito.update(total => total - this.precioBase);
 
-      console.log(`1 Producto Eliminado, Precio total actual ${this.totalCarrito}`);
+      console.log(`1 Producto Eliminado, Precio total actual ${this.totalCarrito()}`);
     }
   }
 
   vaciarCarrito() {
-    this.cantidadProductos = 0;
-    this.totalCarrito = 0;
-    console.log(`Carrito Vaciado, Precio total actual ${this.totalCarrito}`);
+    this.cantidadProductos.set(0)
+    this.totalCarrito.set(0)
+    console.log(`Carrito Vaciado, Precio total actual ${this.totalCarrito()}`);
   }
 
   descuento() {
-    if (this.totalCarrito > 0 && this.contadorLimiteCupon <= 0) {
+    if (this.totalCarrito() > 0 && this.contadorLimiteCupon <= 0) {
       this.contadorLimiteCupon = 1;
-      this.totalCarrito *= 0.8;
-      this.totalCarrito = parseFloat(this.totalCarrito.toFixed(2));
+      this.totalCarrito.update(total => total * 0.8)
+      this.totalCarrito.set(parseFloat(this.totalCarrito().toFixed(2)))
 
-      console.log(`Descuento Aplicado, Precio total actual ${this.totalCarrito}`);
+      console.log(`Descuento Aplicado, Precio total actual ${this.totalCarrito()}`);
     }
   }
 
