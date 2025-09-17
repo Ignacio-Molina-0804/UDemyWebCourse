@@ -13,6 +13,7 @@ export class Carrito {
   totalCarrito: number = 0;
   notificacion: string = '';
   precioBase: number = 37;
+  contadorLimiteCupon: number = 0;
 
   ngOnInit() {
     this.comprobarNotificacion();
@@ -66,5 +67,16 @@ export class Carrito {
     this.totalCarrito = 0;
     console.log(`Carrito Vaciado, Precio total actual ${this.totalCarrito}`);
     this.comprobarNotificacion();
+  }
+
+  descuento() {
+    if (this.totalCarrito > 0 && this.contadorLimiteCupon <= 0) {
+      this.contadorLimiteCupon = 1;
+      this.totalCarrito *= 0.8;
+      this.totalCarrito = parseFloat(this.totalCarrito.toFixed(2));
+
+      console.log(`Descuento Aplicado, Precio total actual ${this.totalCarrito}`);
+      this.comprobarNotificacion();
+    }
   }
 }
