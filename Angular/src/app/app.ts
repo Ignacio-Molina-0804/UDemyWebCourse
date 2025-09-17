@@ -5,10 +5,11 @@ import { Pelicula } from './components/pelicula/pelicula';
 import { config } from './models/config'
 import { Cine } from './components/cine/cine';
 import { Carrito } from './components/carrito/carrito';
+import { CarritoSignals } from './components/carrito-signals/carrito-signals';
 
 @Component({
   selector: 'app-root',
-  imports: [Carrito],
+  imports: [Carrito,CarritoSignals],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
