@@ -1,4 +1,7 @@
 <h1>Ejemplo Señal</h1>
 <h3>Contador: {{contador()}}</h3>
 
+<!-- Al poner el + antes de los () hace que el dato pase a ser de tipo number -->
+<input type="number" [value]="incremento()" (input)="incremento.set(+($any($event.target.value)))">
+
 <button (click)="aumentar()">Aumentar</button>

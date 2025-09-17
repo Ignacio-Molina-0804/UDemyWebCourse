@@ -11,6 +11,7 @@ import { Signal } from '@angular/core';
 export class CarritoSignals {
 
   contador = signal(0);
+  incremento = signal(1);
 
   aumentar(){
 
@@ -18,7 +19,7 @@ export class CarritoSignals {
     // this.contador.set(this.contador() + 1);
 
     // Forma de hacerlo con update (Sirve para actualizar el valor actual)
-    this.contador.update(contadorActual => contadorActual + 1)
+    this.contador.update(contadorActual => contadorActual + this.incremento())
 
   }
 
