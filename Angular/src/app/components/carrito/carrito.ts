@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-carrito',
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './carrito.html',
   styleUrl: './carrito.css',
 })
 export class Carrito {
+  nombreTienda: string = "Mi Tienda"
   cantidadProductos: number = 0;
   totalCarrito: number = 0;
   notificacion: string = '';
@@ -29,5 +31,16 @@ export class Carrito {
     } else {
       this.notificacion = '';
     }
+  }
+
+  addProducto(){
+
+    this.cantidadProductos += 1;
+    this.totalCarrito += 37;
+
+    console.log(`Nuevo productor añadido, Precio total actual ${this.totalCarrito}`)
+
+    this.comprobarNotificacion()
+
   }
 }

@@ -1,13 +1,18 @@
 <h1>Carrito de compras</h1>
 
 <div>
+    
+    <p>Cambiar Nombre de la Tienda : <input type="text" [(ngModel)] = "nombreTienda"/></p>
 
+
+    <h3>{{nombreTienda}}</h3>
     <p>Productos en el carrito: CANTIDAD DE PRODUCTOS</p>
     <p>Total del carrito: TOTAL DEL CARRITO</p>
 
-    <button>Añadir Producto</button>
+    <button (click)="addProducto()">Añadir Producto</button>
     <button>Añadir 5 Producto</button>
     <button>Aplicar cupon de 20%</button>
+    <button>Eliminar un producto</button>
     <button>Vaciar Carrito</button>
 
 </div>
