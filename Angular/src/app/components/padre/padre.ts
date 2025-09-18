@@ -11,4 +11,10 @@ export class Padre {
 
   nombreDelPadre: string = "Leonel Messi"
 
+  saludoRecibido: string = "";
+
+  recibirSaludo(saludo:string){
+    this.saludoRecibido = saludo
+  }
+
 }

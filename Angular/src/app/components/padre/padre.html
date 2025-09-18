@@ -5,7 +5,12 @@
 
 <p>Te presento a mi hijo:</p>
 
-<app-hijo [elNombreDeMiPapa] = "nombreDelPadre"></app-hijo>
+{{saludoRecibido}}
+
+<app-hijo 
+    [elNombreDeMiPapa] = "nombreDelPadre"
+    (saludoDelHijo)="recibirSaludo($event)">
+</app-hijo>
 
 <!-- Atributos Estaticos -->
 <!-- Son todos los atributos que son del HTML normal -->
