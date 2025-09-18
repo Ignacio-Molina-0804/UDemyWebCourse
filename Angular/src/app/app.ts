@@ -6,10 +6,11 @@ import { config } from './models/config'
 import { Cine } from './components/cine/cine';
 import { Carrito } from './components/carrito/carrito';
 import { CarritoSignals } from './components/carrito-signals/carrito-signals';
+import { Padre } from './components/padre/padre';
 
 @Component({
   selector: 'app-root',
-  imports: [Carrito,CarritoSignals],
+  imports: [Padre],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
