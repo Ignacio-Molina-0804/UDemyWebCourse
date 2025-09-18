@@ -2,10 +2,12 @@ import { Component } from '@angular/core';
 import { Pelicula } from '../../models/pelicula';
 import { FormsModule } from '@angular/forms';
 import { NgStyle } from '@angular/common';
+import { PeliculaService } from '../../service/pelicula.service';
 
 @Component({
   selector: 'app-cine',
   imports: [FormsModule, NgStyle],
+  providers: [PeliculaService],
   templateUrl: './cine.html',
   styleUrl: './cine.css',
 })
@@ -18,7 +20,8 @@ export class Cine {
 
   public color: string = "#FFFFFF"
 
-  constructor() {
+  constructor(private peliculaService: PeliculaService) {
+
     this.titulo = 'Modelos';
     this.peliculas = [
       new Pelicula(1, 'El Padrino', 'Mafia', 'Coppola', 1976, 'prime', false),
@@ -47,6 +50,8 @@ export class Cine {
     console.log(this.peliculas);
 
     this.peliculas[1].titulo = 'ET, El marciano';
+
+    this.peliculaService.saludoServicio()
   }
 
   ngDoCheck() {

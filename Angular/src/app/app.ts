@@ -10,7 +10,7 @@ import { Padre } from './components/padre/padre';
 
 @Component({
   selector: 'app-root',
-  imports: [Padre],
+  imports: [Padre, Cine],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
