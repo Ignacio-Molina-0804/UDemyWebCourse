@@ -7,10 +7,11 @@ import { Cine } from './components/cine/cine';
 import { Carrito } from './components/carrito/carrito';
 import { CarritoSignals } from './components/carrito-signals/carrito-signals';
 import { Padre } from './components/padre/padre';
+import { UsuariosHTTP } from './components/usuarios-http/usuarios-http';
 
 @Component({
   selector: 'app-root',
-  imports: [Padre, Cine],
+  imports: [UsuariosHTTP],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
