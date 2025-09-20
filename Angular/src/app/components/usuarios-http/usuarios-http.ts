@@ -16,9 +16,14 @@ export class UsuariosHTTP {
 
   ngOnInit() {
     this._usuarioService.getUsers().subscribe(
-      data => {
-        this.listadoDeUsuarios = data;
+      resultado => {
+        this.listadoDeUsuarios = resultado;
         console.log(this.listadoDeUsuarios.data);
+      },
+      error => {
+
+        console.log(error);
+
       }
     );
   }

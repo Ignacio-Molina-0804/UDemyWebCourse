@@ -1,1 +1,16 @@
 <p>usuarios-http works!</p>
+
+<ul>
+
+    @for (usuario of listadoDeUsuarios?.data; track usuario.id) {
+
+        <li>
+
+            {{usuario.first_name}} {{usuario.last_name}} - {{usuario.email}}
+            <img [src]="usuario.avatar" />
+
+        </li>
+
+    }
+
+</ul>
