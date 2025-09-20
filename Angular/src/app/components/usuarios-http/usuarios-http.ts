@@ -15,15 +15,17 @@ export class UsuariosHTTP {
   }
 
   ngOnInit() {
-    this._usuarioService.getUsers().subscribe(
-      resultado => {
-        this.listadoDeUsuarios = resultado;
-        console.log(this.listadoDeUsuarios.data);
-      },
-      error => {
-
-        console.log(error);
-
+    this._usuarioService.getUsers().subscribe({
+        next: (resultado) => {
+          this.listadoDeUsuarios = resultado;
+          console.log(this.listadoDeUsuarios.data);
+        },
+        error: (error) => {
+          console.log(error);
+        },
+        complete: () => {
+          console.log('¡Operación terminada!');
+        }
       }
     );
   }
