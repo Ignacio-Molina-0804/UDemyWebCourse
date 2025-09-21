@@ -1,5 +1,3 @@
-<h1>{{ title }}</h1>
-<p>{{description}}</p>
 
 <!-- Componente en Angular -->
 <!-- <miProducto></miProducto> -->
@@ -23,4 +21,74 @@
 <!-- <app-padre></app-padre> -->
 
 <!-- Peticiones HTTP -->
-<app-usuarios-http></app-usuarios-http>
+<!-- <app-usuarios-http></app-usuarios-http> -->
+
+
+<h1>{{ title }}</h1>
+<!-- app.component.html -->
+<nav style="background: #333; padding: 10px; display: flex; gap: 15px;">
+  <a 
+    routerLink="/PeticionesHTTP" 
+    routerLinkActive="active-link" 
+    style="color: white; text-decoration: none;">
+    HTTP
+  </a>
+  
+  <a 
+    routerLink="/InputOutputDatos" 
+    routerLinkActive="active-link" 
+    style="color: white; text-decoration: none;">
+    Input/Output
+  </a>
+  
+  <a 
+    routerLink="/Signals" 
+    routerLinkActive="active-link" 
+    style="color: white; text-decoration: none;">
+    Signals
+  </a>
+  
+  <a 
+    routerLink="/Eventos" 
+    routerLinkActive="active-link" 
+    style="color: white; text-decoration: none;">
+    Eventos
+  </a>
+  
+  <a 
+    routerLink="/TWDB-Services" 
+    routerLinkActive="active-link" 
+    style="color: white; text-decoration: none;">
+    Cine
+  </a>
+  
+  <a 
+    routerLink="/Directivas" 
+    routerLinkActive="active-link" 
+    style="color: white; text-decoration: none;">
+    Directivas
+  </a>
+  
+  <a 
+    routerLink="/ComponenteBasico" 
+    routerLinkActive="active-link" 
+    style="color: white; text-decoration: none;">
+    Producto
+  </a>
+  
+  <a 
+    routerLink="/Plantillas" 
+    routerLinkActive="active-link" 
+    style="color: white; text-decoration: none;">
+    Plantillas
+  </a>
+</nav>
+
+<p>{{description}}</p>
+
+<hr>
+
+<!-- Aquí Angular cargará los componentes según la ruta -->
+<main style="padding: 20px;">
+  <router-outlet></router-outlet>
+</main>
