@@ -1,14 +1,17 @@
 import { Component } from '@angular/core';
 import { UsuarioService } from '../../service/usuario.service';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-usuarios-http',
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './usuarios-http.html',
   styleUrl: './usuarios-http.css',
 })
 export class UsuariosHTTP {
   public listadoDeUsuarios: any;
+  public usuarioIndividual: any;
+  public usuarioId: string = "1";
 
   constructor(private _usuarioService: UsuarioService) {
     console.log('Componente de Usuarios Cargado!!');
@@ -28,5 +31,15 @@ export class UsuariosHTTP {
         }
       }
     );
+  }
+
+  buscarUsuario(){
+    this._usuarioService.getUser(parseInt(this.usuarioId || '1')).subscribe({
+      next: (resultado: any) => {
+        this.usuarioIndividual = resultado.data;
+      },
+      error: (error) => console.log(error),
+      complete: () => console.log('¡Operación terminada!')
+    })
   }
 }

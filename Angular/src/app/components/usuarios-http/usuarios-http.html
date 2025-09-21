@@ -1,4 +1,13 @@
-<p>usuarios-http works!</p>
+<h1>Buscar usuario individual: </h1>
+
+<input type="number" [(ngModel)] = "usuarioId" (keyup)="buscarUsuario()"/>
+<p>Datos del usuario:</p>
+<p>{{usuarioIndividual.first_name}} {{usuarioIndividual.last_name}} - {{usuarioIndividual.email}}</p>
+<p><img [src]="usuarioIndividual.avatar"></p>
+
+<hr>
+
+<h1>Lista de Usuarios por GET: </h1>
 
 <ul>
 
