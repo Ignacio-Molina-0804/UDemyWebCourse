@@ -11,7 +11,7 @@ import { FormsModule } from '@angular/forms';
 export class UsuariosHTTP {
   public listadoDeUsuarios: any;
   public usuarioIndividual: any;
-  public usuarioId: string = "1";
+  public usuarioId: string = '1';
 
   constructor(private _usuarioService: UsuarioService) {
     console.log('Componente de Usuarios Cargado!!');
@@ -19,27 +19,37 @@ export class UsuariosHTTP {
 
   ngOnInit() {
     this._usuarioService.getUsers().subscribe({
-        next: (resultado) => {
-          this.listadoDeUsuarios = resultado;
-          console.log(this.listadoDeUsuarios.data);
-        },
-        error: (error) => {
-          console.log(error);
-        },
-        complete: () => {
-          console.log('¡Operación terminada!');
-        }
-      }
-    );
+      next: (resultado) => {
+        this.listadoDeUsuarios = resultado;
+        console.log(this.listadoDeUsuarios.data);
+      },
+      error: (error) => {
+        console.log(error);
+      },
+      complete: () => {
+        console.log('¡Operación terminada!');
+      },
+    });
   }
 
-  buscarUsuario(){
+  buscarUsuario() {
     this._usuarioService.getUser(parseInt(this.usuarioId || '1')).subscribe({
       next: (resultado: any) => {
         this.usuarioIndividual = resultado.data;
       },
       error: (error) => console.log(error),
-      complete: () => console.log('¡Operación terminada!')
-    })
+      complete: () => console.log('¡Operación terminada!'),
+    });
+  }
+
+  guardarUsuario() {
+    let nuevoUsuario = {
+      name: 'Nacho',
+      job: 'Developer',
+    };
+
+    this._usuarioService.createUser(nuevoUsuario).subscribe(respuesta => {
+      console.log("Usuario creado correctamente", respuesta);
+    });
   }
 }

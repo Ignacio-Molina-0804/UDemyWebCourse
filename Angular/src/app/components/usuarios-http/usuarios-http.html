@@ -1,9 +1,17 @@
+
+<h1>Peticion HTTP por post</h1>
+
+<button (click)="guardarUsuario()">Crear Usuario</button>
+
+
+<hr>
+
 <h1>Buscar usuario individual: </h1>
 
 <input type="number" [(ngModel)] = "usuarioId" (keyup)="buscarUsuario()"/>
 <p>Datos del usuario:</p>
-<p>{{usuarioIndividual.first_name}} {{usuarioIndividual.last_name}} - {{usuarioIndividual.email}}</p>
-<p><img [src]="usuarioIndividual.avatar"></p>
+<p>{{usuarioIndividual?.first_name}} {{usuarioIndividual?.last_name}} - {{usuarioIndividual?.email}}</p>
+<p><img [src]="usuarioIndividual?.avatar"></p>
 
 <hr>
 
@@ -15,8 +23,8 @@
 
         <li>
 
-            {{usuario.first_name}} {{usuario.last_name}} - {{usuario.email}}
-            <img [src]="usuario.avatar" />
+            {{usuario?.first_name}} {{usuario?.last_name}} - {{usuario?.email}}
+            <img [src]="usuario?.avatar" />
 
         </li>
 
