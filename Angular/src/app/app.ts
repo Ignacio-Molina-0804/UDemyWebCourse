@@ -8,11 +8,11 @@ import { Carrito } from './components/carrito/carrito';
 import { CarritoSignals } from './components/carrito-signals/carrito-signals';
 import { Padre } from './components/padre/padre';
 import { UsuariosHTTP } from './components/usuarios-http/usuarios-http';
-import { RouterLink, RouterOutlet } from '@angular/router';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, RouterLink],
+  imports: [RouterOutlet, RouterLink, RouterLinkActive],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

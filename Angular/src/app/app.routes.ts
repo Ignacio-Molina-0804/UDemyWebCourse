@@ -7,6 +7,7 @@ import { CarritoSignals } from './components/carrito-signals/carrito-signals';
 import { Carrito } from './components/carrito/carrito';
 import { Ventas } from './components/ventas/ventas';
 import { Usuario } from './components/usuario/usuario';
+import { Pagina404 } from './components/pagina404/pagina404';
 
 export const routes: Routes = [
 
@@ -18,5 +19,6 @@ export const routes: Routes = [
     {path: 'Directivas', component: Ventas},
     {path: 'ComponenteBasico', component: ProductoComponent},
     {path: 'Plantillas', component: Usuario},
+    {path: '**', component: Pagina404},
 
 ];
