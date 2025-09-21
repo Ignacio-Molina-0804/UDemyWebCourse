@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { UsuarioService } from '../../service/usuario.service';
 import { FormsModule } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-usuarios-http',
@@ -11,13 +12,24 @@ import { FormsModule } from '@angular/forms';
 export class UsuariosHTTP {
   public listadoDeUsuarios: any;
   public usuarioIndividual: any;
-  public usuarioId: string = '1';
+  public usuarioId: number = 1;
 
-  constructor(private _usuarioService: UsuarioService) {
+  constructor(private _usuarioService: UsuarioService, private route: ActivatedRoute) {
     console.log('Componente de Usuarios Cargado!!');
   }
 
   ngOnInit() {
+
+    this.route.paramMap.subscribe(params => {
+
+      let id = params.get('id')
+
+      this.usuarioId = parseInt(id ?? "8") 
+
+      console.log(id)
+
+    })
+
     this._usuarioService.getUsers().subscribe({
       next: (resultado) => {
         this.listadoDeUsuarios = resultado;
@@ -33,7 +45,7 @@ export class UsuariosHTTP {
   }
 
   buscarUsuario() {
-    this._usuarioService.getUser(parseInt(this.usuarioId || '1')).subscribe({
+    this._usuarioService.getUser(this.usuarioId || 1).subscribe({
       next: (resultado: any) => {
         this.usuarioIndividual = resultado.data;
       },
