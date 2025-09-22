@@ -9,6 +9,7 @@ import { Ventas } from './components/ventas/ventas';
 import { Usuario } from './components/usuario/usuario';
 import { Pagina404 } from './components/pagina404/pagina404';
 import { Formularios } from './components/formularios/formularios';
+import { FormulariosReactivos } from './components/formularios-reactivos/formularios-reactivos';
 
 export const routes: Routes = [
 
@@ -21,6 +22,7 @@ export const routes: Routes = [
     {path: 'ComponenteBasico', component: ProductoComponent},
     {path: 'Plantillas', component: Usuario},
     {path: 'Formularios', component: Formularios},
+    {path: 'FormulariosReactivos', component: FormulariosReactivos},
     {path: '**', component: Pagina404},
 
 ];
