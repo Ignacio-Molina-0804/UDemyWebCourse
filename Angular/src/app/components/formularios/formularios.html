@@ -5,23 +5,101 @@
 
     <p>
         <label for="nombre">Nombre:</label><br>
-        <input type="text" name="nombre" id="nombre" [(ngModel)] = "nombre" required minlength="3" max="40"/>
+        <input type="text" name="nombre" id="nombre" [(ngModel)]="nombre" required minlength="3" maxlength="40" #nombreField="ngModel" />
+
+        @if (nombreField.invalid && nombreField.touched){
+            <div class="invalido">
+
+                El nombre es incorrecto, hazlo bien.
+
+                @if (nombreField.errors?.['required']){
+                    <span>El campo es obligatorio</span>
+                }
+
+                @if (nombreField.errors?.['minlength']){
+                    <span>El nombre debe tener al menos 3 caracteres</span>
+                }
+
+                @if (nombreField.errors?.['maxlength']){
+                    <span>El nombre no puede tener mas de 40 caracteres</span>
+                }
+
+            </div>
+        }
     </p>
-    
+
+
+
     <p>
         <label for="email">Email:</label><br>
-        <input type="text" name="email" id="email" [(ngModel)] = "email" required email />
+        <input type="text" name="email" id="email" [(ngModel)]="email" required email #emailField="ngModel"/>
+
+        @if (emailField.invalid && emailField.touched){
+            <div class="invalido">
+
+                El email es incorrecto, hazlo bien.
+
+                @if (emailField.errors?.['required']){
+                    <span>El campo es obligatorio</span>
+                }
+
+                @if (emailField.errors?.['email']){
+                    <span>El email debe tener un formato correcto</span>
+                }
+
+            </div>
+        }
+
     </p>
 
     <p>
         <label for="edad">Edad:</label><br>
-        <input type="number" name="edad" id="edad" [(ngModel)] = "edad" required min="18" max="100"/>
-    </p>    
+        <input type="number" name="edad" id="edad" [(ngModel)]="edad" required min="18" max="100" #edadField="ngModel"/>
+
+        @if (edadField.invalid && edadField.touched){
+            <div class="invalido">
+
+                La edad es incorrecta, hazla bien.
+
+                @if (edadField.errors?.['required']){
+                    <span>El campo es obligatorio</span>
+                }
+
+                @if (edadField.errors?.['min']){
+                    <span>La edad minima es 18</span>
+                }
+
+                @if (edadField.errors?.['max']){
+                    <span>La edad maxima es 100</span>
+                }
+
+            </div>
+        }
+
+    </p>
 
     <p>
         <label for="password">Contraseña:</label><br>
-        <input type="password" name="password" id="password" [(ngModel)] = "password" required minlength="7"/>
-    </p>    
+        <input type="password" name="password" id="password" [(ngModel)]="password" required minlength="7" #passwordField="ngModel"/>
+
+
+        @if (passwordField.invalid && passwordField.touched){
+            <div class="invalido">
+
+                La contraseña es incorrecta, hazla bien.
+
+                @if (passwordField.errors?.['required']){
+                    <span>El campo es obligatorio</span>
+                }
+
+                @if (passwordField.errors?.['minlength']){
+                    <span>La contraseña debe tener al menos 7 caracteres</span>
+                }
+
+            </div>
+        }
+
+    </p>
 
     <button type="submit" [disabled]="!form.valid">Enviar</button>
 </form>
