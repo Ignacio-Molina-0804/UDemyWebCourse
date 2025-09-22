@@ -11,7 +11,7 @@ export class Formularios {
 
   nombre = ""
   email = ""
-  edad = 0
+  edad = 18
   password = ""
 
   onSubmit() {
