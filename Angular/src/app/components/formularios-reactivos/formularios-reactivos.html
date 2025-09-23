@@ -19,10 +19,61 @@
             </span>
         </div>
 
-        <button type="submit" [disabled]="formulario.invalid">
-            Enviar
-        </button>
+    </div>
+
+    <div class="field">
+
+        <label for="email"> Email </label>
+        <input type="text" name="email" id="email" formControlName="email" />
+
+        <div *ngIf="formulario.get('email')?.valid && formulario.get('email')?.touched">
+            <span *ngIf="formulario.get('email')?.errors?.['required']">
+                El email es obligatorio
+            </span>
+            <span *ngIf="formulario.get('email')?.errors?.['email']">
+                El email no es válido
+            </span>
+        </div>
 
     </div>
+
+    <div class="field">
+
+        <label for="edad"> Edad </label>
+        <input type="number" name="edad" id="edad" formControlName="edad" />
+
+        <div *ngIf="formulario.get('edad')?.valid && formulario.get('edad')?.touched">
+            <span *ngIf="formulario.get('edad')?.errors?.['required']">
+                La edad es obligatoria
+            </span>
+            <span *ngIf="formulario.get('edad')?.errors?.['min']">
+                La edad mínima es 18
+            </span>
+            <span *ngIf="formulario.get('edad')?.errors?.['max']">
+                La edad máxima es 65
+            </span>
+        </div>
+
+    </div>
+
+    <div class="field">
+
+        <label for="password"> Contraseña </label>
+        <input type="password" name="password" id="password" formControlName="password" />
+
+        <div *ngIf="formulario.get('password')?.valid && formulario.get('password')?.touched">
+            <span *ngIf="formulario.get('password')?.errors?.['required']">
+                La contraseña es obligatoria
+            </span>
+            <span *ngIf="formulario.get('password')?.errors?.['minlength']">
+                La contraseña debe tener al menos 6 caracteres
+            </span>
+        </div>
+
+    </div>
+
+    <button type="submit" [disabled]="formulario.invalid">
+        Enviar
+    </button>
 
 </form>
