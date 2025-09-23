@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-formularios-reactivos',
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, CommonModule],
   templateUrl: './formularios-reactivos.html',
   styleUrl: './formularios-reactivos.css'
 })
@@ -19,5 +20,18 @@ export class FormulariosReactivos {
 
   })
 
+  onSubmit(){
+
+    if(this.formulario.valid){
+
+      console.info("Formulario esta enviado: ", this.formulario.value)
+
+    } else {
+
+      console.warn("Formulario no válido");
+
+    }
+
+  }
 
 }

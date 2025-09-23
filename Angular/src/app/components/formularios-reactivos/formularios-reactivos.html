@@ -1,1 +1,28 @@
-<p>formularios-reactivos works!</p>
+<h2> Formularios Reactivos en Angular </h2>
+
+<form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+
+    <div class="field">
+
+        <label for="nombre"> Nombre </label>
+        <input type="text" name="nombre" id="nombre" formControlName="nombre" />
+
+        <div *ngIf="formulario.get('nombre')?.valid && formulario.get('nombre')?.touched">
+            <span *ngIf="formulario.get('nombre')?.errors?.['required']">
+                El nombre es obligatorio
+            </span>
+            <span *ngIf="formulario.get('nombre')?.errors?.['minlength']">
+                El nombre debe tener al menos 3 caracteres
+            </span>
+            <span *ngIf="formulario.get('nombre')?.errors?.['maxlength']">
+                El nombre no debe exceder los 10 caracteres
+            </span>
+        </div>
+
+        <button type="submit" [disabled]="formulario.invalid">
+            Enviar
+        </button>
+
+    </div>
+
+</form>
