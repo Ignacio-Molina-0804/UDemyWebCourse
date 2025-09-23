@@ -7,7 +7,7 @@
         <label for="nombre"> Nombre </label>
         <input type="text" name="nombre" id="nombre" formControlName="nombre" />
 
-        <div *ngIf="formulario.get('nombre')?.valid && formulario.get('nombre')?.touched">
+        <div *ngIf="formulario.get('nombre')?.invalid && formulario.get('nombre')?.touched">
             <span *ngIf="formulario.get('nombre')?.errors?.['required']">
                 El nombre es obligatorio
             </span>
@@ -26,7 +26,7 @@
         <label for="email"> Email </label>
         <input type="text" name="email" id="email" formControlName="email" />
 
-        <div *ngIf="formulario.get('email')?.valid && formulario.get('email')?.touched">
+        <div *ngIf="formulario.get('email')?.invalid && formulario.get('email')?.touched">
             <span *ngIf="formulario.get('email')?.errors?.['required']">
                 El email es obligatorio
             </span>
@@ -42,7 +42,7 @@
         <label for="edad"> Edad </label>
         <input type="number" name="edad" id="edad" formControlName="edad" />
 
-        <div *ngIf="formulario.get('edad')?.valid && formulario.get('edad')?.touched">
+        <div *ngIf="formulario.get('edad')?.invalid && formulario.get('edad')?.touched">
             <span *ngIf="formulario.get('edad')?.errors?.['required']">
                 La edad es obligatoria
             </span>
@@ -61,7 +61,7 @@
         <label for="password"> Contraseña </label>
         <input type="password" name="password" id="password" formControlName="password" />
 
-        <div *ngIf="formulario.get('password')?.valid && formulario.get('password')?.touched">
+        <div *ngIf="formulario.get('password')?.invalid && formulario.get('password')?.touched">
             <span *ngIf="formulario.get('password')?.errors?.['required']">
                 La contraseña es obligatoria
             </span>
