@@ -39,6 +39,6 @@ const ProjectSchema = new Schema({
 })
 
 // Crear modelo, indicarle la coleccion donde se van a guardar los docs
-
-
 // Exportar el modelo (fichero project.js)
+
+module.exports = model("Project", ProjectSchema, "projects")
