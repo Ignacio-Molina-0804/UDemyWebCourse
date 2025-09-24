@@ -18,6 +18,8 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Cargar rutas
+const projectRouter = require("./routes/projectRoutes");
+app.use("/api", projectRouter);
 
 // Crear endpoints de prueba
 app.get("/", (req, res) => {
