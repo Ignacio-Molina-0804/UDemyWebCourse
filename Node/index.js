@@ -1,6 +1,10 @@
 // Importar las dependencias
+const connection = require("./database/connection");
 const express = require("express");
 const cors = require("cors");
+
+// Conexion con la Base de Datos
+connection();
 
 // Crear servidor
 const app = express();
