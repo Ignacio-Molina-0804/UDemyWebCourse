@@ -9,7 +9,7 @@ const ProjectController = require('../controllers/projectController');
 router.post('/save', ProjectController.save);
 router.get('/list', ProjectController.list);
 router.get('/item/:id', ProjectController.item);
-router.get('/delete/:id', ProjectController.deleteProject);
+router.delete('/delete/:id', ProjectController.deleteProject);
 
 // Exportar Rutas
 module.exports = router;

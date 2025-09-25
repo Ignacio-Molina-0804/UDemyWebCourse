@@ -13,7 +13,6 @@ const save = (req, res) => {
   }
 
   // Crear objeto
-
   let projectToSave = new ProjectModel(body);
 
   // Guardo el objeto en la BD
@@ -35,17 +34,10 @@ const save = (req, res) => {
     .catch((error) => {
       return res.status(500).send({
         status: "error",
-        message: "Faltan datos por enviar",
+        message: "Error al guardar el proyecto",
         error,
       });
     });
-
-  // Devolver Respuestas
-
-  return res.status(200).json({
-    mensaje: "Probando Controlador",
-    body,
-  });
 };
 
 const list = (req, res) => {
