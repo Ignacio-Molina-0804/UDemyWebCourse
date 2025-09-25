@@ -7,6 +7,7 @@ const ProjectController = require('../controllers/projectController');
 
 // Definir Rutas
 router.post('/save', ProjectController.save);
+router.get('/list', ProjectController.list);
 
 // Exportar Rutas
 module.exports = router;

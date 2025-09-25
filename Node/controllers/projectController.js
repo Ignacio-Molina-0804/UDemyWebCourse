@@ -59,8 +59,35 @@ const save = (req, res) => {
 
 }
 
+const list = (req, res) => {
+    ProjectModel.find()
+        .then(projects => {
+            if (!projects || projects.length === 0) {
+                return res.status(404).send({
+                    status: "error",
+                    message: "No hay proyectos para mostrar"
+                });
+            }
+
+            return res.status(200).send({
+                status: "success",
+                projects
+            });
+        })
+        .catch(error => {
+            return res.status(500).send({
+                status: "error",
+                message: "Error al listar los proyectos",
+                error
+            });
+        });
+};
+
+
+
 module.exports = {
 
-    save
+    save,
+    list
 
 };
