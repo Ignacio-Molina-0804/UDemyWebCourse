@@ -97,8 +97,34 @@ const item = (req, res) => {
     });
 };
 
+const deleteProject = (req, res) => {
+  let id = req.params.id;
+
+  ProjectModel.findByIdAndDelete(id)
+    .then((project) => {
+      if (!project) {
+        return res.status(404).send({
+          status: "error",
+          message: "No se ha borrado el proyecto",
+        });
+      }
+      return res.status(200).send({
+        status: "success",
+        project,
+      });
+    })
+    .catch((error) => {
+      return res.status(500).send({
+        status: "error",
+        message: "Error al eliminar un documento especifico!",
+        error,
+      });
+    });
+};
+
 module.exports = {
   save,
   list,
   item,
+  deleteProject
 };
