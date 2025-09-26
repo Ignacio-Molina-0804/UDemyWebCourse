@@ -114,9 +114,43 @@ const deleteProject = (req, res) => {
     });
 };
 
+const update = (req, res) => {
+  let body = req.body;
+
+  if (!body || !body.id) {
+    return res.status(404).send({
+      status: "error",
+      message: "No hay datos para actualizar",
+    });
+  }
+
+  ProjectModel.findByIdAndUpdate(body.id, body, { new: true })
+    .then((projectUpdate) => {
+      if (!projectUpdate) {
+        return res.status(404).send({
+          status: "error",
+          project: projectUpdate,
+        });
+      }
+
+      return res.status(200).send({
+        status: "success",
+        project: projectUpdate,
+      });
+    })
+    .catch((error) => {
+      return res.status(500).send({
+        status: "error",
+        message: "Error al eliminar un documento especifico!",
+        error,
+      });
+    });
+};
+
 module.exports = {
   save,
   list,
   item,
-  deleteProject
+  deleteProject,
+  update,
 };
