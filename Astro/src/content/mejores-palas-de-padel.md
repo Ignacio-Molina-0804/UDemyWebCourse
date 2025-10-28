@@ -1,7 +1,7 @@
 ---
-title: "Como hacer una vibora"
+title: "Mejores palas de Padel"
 category: "Recomendación"
-date: "04-04-2040"
+date: "04-04-2028"
 ---
 
 What is Lorem Ipsum?
