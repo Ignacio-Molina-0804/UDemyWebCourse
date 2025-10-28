@@ -163,3 +163,13 @@
 			line-height: 1.5;
 		}
 	}
+
+	.article{
+
+	   border-radius: 5px;
+	   border: 1px solid #ccc;
+	   padding: 20px;
+	   margin-bottom: 10px;
+	   background-color: white;		
+
+	}
