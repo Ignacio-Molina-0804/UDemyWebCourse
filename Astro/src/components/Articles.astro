@@ -10,7 +10,7 @@ const articles = await getCollection("articles");
         <p>
             {article.data.category}
             <br/>
-            <a href="#">Leer más</a>
+            <a href={`/articles/${article.slug}`}>Leer más</a>
         </p>
     </article>
 ))}
