@@ -4,34 +4,13 @@ import { getCollection } from "astro:content";
 const articles = await getCollection("articles");
 ---
 
-<article class="article">
-  <h2>Titulo de mi articulo</h2>
-  <p>
-    Descripcion del articulo
-    <a href="#">Leer más</a>
-  </p>
-</article>
-
-<article class="article">
-  <h2>Titulo de mi articulo</h2>
-  <p>
-    Descripcion del articulo
-    <a href="#">Leer más</a>
-  </p>
-</article>
-
-<article class="article">
-  <h2>Titulo de mi articulo</h2>
-  <p>
-    Descripcion del articulo
-    <a href="#">Leer más</a>
-  </p>
-</article>
-
-<article class="article">
-  <h2>Titulo de mi articulo</h2>
-  <p>
-    Descripcion del articulo
-    <a href="#">Leer más</a>
-  </p>
-</article>
+{articles.map((article) => (
+    <article class="article">
+        <h2>{article.data.title}</h2>
+        <p>
+            {article.data.category}
+            <br/>
+            <a href="#">Leer más</a>
+        </p>
+    </article>
+))}
